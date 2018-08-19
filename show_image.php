@@ -1,0 +1,1 @@
+<img src="<?php echo $_GET['src']; ?>" style="width:100%" />

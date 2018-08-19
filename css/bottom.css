@@ -1,0 +1,47 @@
+body{
+    margin: 0px;
+}
+#bottom1{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 90px;
+    margin-top: 0px;
+    background-color: skyblue;
+    color: black;
+}
+
+#bottom1 p, ul{
+    margin-left: 120px;
+}
+
+#cordi img{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: -20px;
+}
+
+#cordi ul{
+    position: relative;
+    margin-left: 800px;
+    margin-top: -250px;
+}
+#co{
+    position: relative;
+    margin-left: 150px;
+}
+
+#cordi li{
+    position: relative;
+    float: left;
+    padding-left: 40px;
+    text-align: center;
+}
+#bottom2{
+    position: relative;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    margin-top: 200px;
+    background-color: aliceblue;
+    text-align: center;
+}

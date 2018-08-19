@@ -1,0 +1,54 @@
+h2{
+    font-family: fantasy;
+    font-size: 40px;
+    color: chartreuse;
+}
+
+p{
+    text-align:center;
+    font-size: 22px;
+    color: darkorange;
+    font-family: cursive;
+}
+
+img{
+    width: 25px;
+    height: 25px;
+}
+h3{
+    font-family: sans-serif;
+    color: burlywood;
+    font-size: 30px;
+}
+li{
+    list-style-type: none;
+}
+#event_vibgyor{
+    text-align: center;
+}
+div{
+    padding-bottom: 10px;
+}
+div:hover{
+    animation-name: backchange;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes backchange{
+    for{ background-color: aliceblue}
+    to{background-color:lightgrey}
+}
+li{
+    font-family:cursive;
+    font-size: 20px;
+    color: 1771af;
+    font-weight: 400;
+}
+h3:hover{
+    text-decoration-line: underline;
+}
+.know{
+    text-align: right;
+}
