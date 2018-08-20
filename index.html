@@ -1,41 +1,168 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title>ARTGEEKS</title>
-<link href="main.css" type="text/css" rel = "stylesheet" />
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0"-->
-</head>
-<body>
-<div class = "top">
-<p class="top">ARTGEEKS</p>
-<ul>
-    <li class = "top"><a href = "index.html">Home</a></li>
-    <li class = "top"><a href = "members.html">Members</a></li>
-    <li class = "top"><a href = "pic.html">Gallery</a></li>
-    <li class = "top"><a href = "contact.html">Contact Us</a></li>
-</ul>
-</div>
-<img class = "slide" src="img/final2.gif">
-<div id ="menu">
-    <ul>
-    <li>
-        <a href = "about.html" target = "name">About</a>
-    </li>
-    <li>
-        <a href = "events.html" target = "name">Our Events</a>
-    </li>
-<!--
-    <li>
-        <a href = "#">Achiever</a>
-    </li>
-    <li>
-        <a href = "#">Achievements</a>
-    </li>
--->
-    </ul>
-</div>
-<iframe src="about.html" name = "name" class = "midframe">
-    <p> frame not available </p></iframe>
-<iframe src="bottom.html" class="bottom"></iframe>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <style>
+            @media only screen and (max-width: 768px)
+            {
+                #content-window{
+                    margin-top: 10rem;
+                    content: none;
+                }   
+            }
+            @media only screen and (max-width: 992px)
+            {
+                #content-window{
+                    margin-top: 2rem;
+                }   
+            }
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+  }
+/*
+.container-fluid{
+               margin-top: 4rem; 
+            }
+*/
+            .body{
+                background-color: blue;
+            }
+  </style>
+     </head>
+    <body>
+    <div class="container-fluid">
+      <br>
+        <center><p style="font-size: 40px;">ArtGeeks</p></center>
+    </div>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Member</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li> 
+            </ul>
+          </div>  
+        </nav>
+        <div class="container-fluid col-lg-10 col-md-10 col-sm-12" style="margin-top: 2rem">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="1.jpg" alt="First">
+            </div>
+            <div class="carousel-item">
+              <img src="2.jpg" alt="Second">
+            </div>
+            <div class="carousel-item">
+              <img src="3.jpg" alt="Third" >
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+        </div>
+        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
+        <h2 style="text-align:center; margin-top: 40px;">About</h2>
+        <p>Art Geeks is the art club of the IIT Mandi. It is the heart of the creativity in the college. In a small phase it has successfully established its identity in the college</p>
+        <p>Throughout the time it has involved in different different activities including wall paintings, graffiti and many exciting stuffs</p>
+        </div>
+        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
+        <h2 style="text-align:center; margin-top: 40px;">Events</h2>
+        <div id="event_vibgyor">
+        <h3>Vibgyor</h3>
+        <p>Vibgyor is the annual intracollege fest of IIT Mandi exclucively by the ArtGeeks for the encouagement of the involvement of the students in the art related activities.</p>
+        <p>It include a number of events which include - </p>
+        <ul>
+            <li>Canvas</li>
+            <li>Sketching</li>
+            <li>Collage Making</li>
+            <li>Stone Painting</li>
+            <li>Painting</li>
+        </ul>
+        </div>
+        <div id="event_vibgyor">
+        <h3>@Exodia</h3>
+        <p>Exodia is the annual cultural and technical fest of IIT Mandi. It have the events by all the technical and cultural society of IIT Mandi</p>
+        <p>ArtGeeks has an important contribution toward Exodia trough the designing of various stuffs around the campus including 3D models,Photo Booth, Wall Painting.... </p>
+        <p>It organises a number of events like - </p>
+        <ul>
+            <li>Canvas Making</li>
+            <li>Doodle Making</li>
+        </ul>
+        </div>
+        </div>
+        <div class="container-fluid bg-dark" style="color: aliceblue; margin-top:4rem; padding-top: 60px;padding-bottom: 20px">
+            <div class="row">
+            <div class="col-sm-12 col-md-6">
+            <p>Important Links</p>
+                <ul>
+                    <li><a href = "https://www.facebook.com/artGeeksIITM/" target="_blank">Facebook Page</a></li>
+                <li>Youtube Channels</li>
+                <ul>
+                    <li class="2">Official Channel  <b style = "color:blue">Comming soon....</b></li>
+                    <li class="2"><a href = "https://www.youtube.com/channel/UCP9NeIkgNHRTdL6NKKzJMAg" target="_blank">Nisha Shivakar Kumari</a></li>
+                </ul>
+                <li><a href = "http://iitmandi.ac.in/" target="_blank">IIT Mandi</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-6" style="text-align: center">
+            <ul type = "none">
+                <p>Co-ordinators</p>
+                <div class="row">
+                    <div class="col-6" style="text-align: right">
+                        
+                        <li>
+                        <img src = "members/mayank@2017.jpg" height=100px width=100px/>
+                        <p>Mayank Agarwal</p>
+                        </li>
+                        
+                     </div>
+                    <div class="col-6" style="text-align: left">
+                        
+                        <li>
+                        <img src = "members/shikhar@2017.jpg" height=100px width=100px/>
+                        <p>Shikhar Kumar</p>
+                        </li>
+                       
+                    </div>
+                </div>
+            </ul>
+            </div>
+            <br/>
+        </div>
+        </div>
+        <div class="container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
+    </body>
 </html>
