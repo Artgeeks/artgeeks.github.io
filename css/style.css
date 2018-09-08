@@ -1,0 +1,104 @@
+        #mySidenav a {
+            position: fixed;
+            left: -80px;
+            transition: 0.3s;
+            padding: 15px;
+            padding-left: 25px;
+            width: 120px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+        }
+
+        #fb {
+            top: 260px;
+            background-color: #4CAF50;
+        }
+
+        #insta {
+            top: 320px;
+            background-color: #2196F3;
+        }
+
+        #mail {
+            top: 380px;
+            background-color: #f44336;
+        }
+
+        #contact {
+            top: 440px;
+            background-color: #555
+        }
+/*
+            .row{
+                margin: 15px;
+            }
+*/
+            .overlay{
+                text-decoration: none;
+                position: absolute;
+                bottom: 0;
+                background: rgb(0,0,0);
+                background: rgba(0,0,0,0.5);
+                color: #f1f1f1;
+                width: 100%;
+                transition: 1s ease;
+                opacity:0;
+                color: white;
+                font-size:20px;
+                padding: 20px;
+                text-align: center;
+            }
+            .gallery-container {
+              position: relative;
+            }
+
+            .image {
+              display: block;
+              width: 100%;
+              transition: 1s ease;
+            }
+            
+            .gallery-container:hover .overlay {
+                opacity: 0.8;
+            }
+            
+            .gallery-container:hover .image{
+                opacity: 0.5;
+            }
+            
+            @media screen and (max-width: 768px){
+                .sidenav{
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 768px)
+            {
+                #content-window{
+                    margin-top: 10rem;
+                    content: none;
+                }   
+            }
+            @media only screen and (max-width: 992px)
+            {
+                #content-window{
+                    margin-top: 2rem;
+                }   
+            }
+              /* Make the image fully responsive */
+            .carousel-inner img {
+                  width: 100%;
+            }
+            /*
+            .container-fluid{
+                           margin-top: 4rem; 
+                        }
+            */
+            .body{
+                background-color: blue;
+            }
