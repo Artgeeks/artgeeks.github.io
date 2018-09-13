@@ -84,6 +84,11 @@
                     content: none;
                 }   
             }
+            @media only screen and (min-width: 768px){
+                #bottom1{
+                    margin-left: 100px;
+                }
+            }
             @media only screen and (max-width: 992px)
             {
                 #content-window{
