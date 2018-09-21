@@ -11,10 +11,18 @@
         <style>
             body{
                 background-image: url("compressjpeg/background-min.jpg");
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position:center;
+                min-height: 100%;
+                min-width: 100%;
+                @media screen and (max-width: 768px){
+                    background-image: url("compressjpeg-1/background-min.jpg");
+                }
             }
         </style>
      </head>
@@ -144,6 +152,8 @@
         </div>
         </div>
         <br><br>
+        </div>
+        <div class="col-12">
         </div>
         <div class="container-fluid bg-dark" style="color: aliceblue; margin-top:4rem; padding-top: 60px;padding-bottom: 20px">
             <div class="row">
