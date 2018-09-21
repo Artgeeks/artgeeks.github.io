@@ -1,10 +1,3 @@
-        body{
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-blend-mode: soft-light;
-            background-position:center;
-        }
         #mySidenav a {
             position: fixed;
             left: -80px;
