@@ -25,9 +25,153 @@
                 min-height: 100%;
                 min-width: 100%;
             }
+            #loader {
+                display: block;
+                background: #fff;
+/*                background: radial-gradient(#222, #000);*/
+                bottom: 0;
+                left: 0;
+                overflow: hidden;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 99999;
+            }
+
+            .loader-inner {
+                bottom: 0;
+                height: 60px;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100px;
+            }
+
+            .loader-line-wrap {
+                animation: 
+                    spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
+                ;
+                box-sizing: border-box;
+                height: 50px;
+                left: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                transform-origin: 50% 100%;
+                width: 100px;
+            }
+            .loader-line {
+                border: 4px solid transparent;
+                border-radius: 100%;
+                box-sizing: border-box;
+                height: 100px;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100px;
+            }
+            .loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
+            .loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
+            .loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
+            .loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
+            .loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+
+            .loader-line-wrap:nth-child(1) .loader-line {
+                border-color: hsl(0, 80%, 60%);
+                height: 90px;
+                width: 90px;
+                top: 7px;
+            }
+            .loader-line-wrap:nth-child(2) .loader-line {
+                border-color: hsl(60, 80%, 60%);
+                height: 76px;
+                width: 76px;
+                top: 14px;
+            }
+            .loader-line-wrap:nth-child(3) .loader-line {
+                border-color: hsl(120, 80%, 60%);
+                height: 62px;
+                width: 62px;
+                top: 21px;
+            }
+            .loader-line-wrap:nth-child(4) .loader-line {
+                border-color: hsl(180, 80%, 60%);
+                height: 48px;
+                width: 48px;
+                top: 28px;
+            }
+            .loader-line-wrap:nth-child(5) .loader-line {
+                border-color: hsl(240, 80%, 60%);
+                height: 34px;
+                width: 34px;
+                top: 35px;
+            }
+
+            @keyframes spin {
+                0%, 15% {
+                    transform: rotate(0);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            #main-body {
+/*              transition-delay: 2s;*/
+              position: relative;
+              -webkit-animation-name: animatebottom;
+              -webkit-animation-duration: 1s;
+              animation-name: animatebottom;
+              animation-duration: 1s
+            }
+
+            @-webkit-keyframes animatebottom {
+              from { bottom:-100px; opacity:0 } 
+              to { bottom:0px; opacity:1 }
+            }
+
+            @keyframes animatebottom { 
+              from{ bottom:-100px; opacity:0 } 
+              to{ bottom:0; opacity:1 }
+            }
+
         </style>
      </head>
-    <body>
+    <body onload="myLoaderFunction()">
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var myVar;
+
+    function myLoaderFunction(){
+        myVar = setTimeout(showPage, 1000);
+    }  
+    function showPage(){
+        document.getElementById("loader").style.display="none";
+        document.getElementById("main-body").style.display="block";
+    }
+    </script>
+    <div id="main-body" style="display: none">
     <div id="mySidenav" class="sidenav">
       <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><img src="connect/fb-2.svg" style="height: 40px; width: 40px;"></a>
       <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><img src="connect/insta.png" style="height: 40px; width: 40px;"></a>
@@ -93,19 +237,17 @@
         </div>
         </div>
         <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
-        <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">About</h2>
-        <br>
-        <div style="padding: 10px; box-shadow: 15px 15px 5px grey; border-radius: 15px 50px; background-image: linear-gradient(to bottom right, #DAA520, #FFFACD)">
+        <h2 style="text-align:center; margin-top: 20px;font-family: 'Roboto Condensed', sans-serif;">About</h2>
+        <div style="background: rgba(255, 255, 255, 0.4);">
         <br><br>
-        <center>Art Geeks is the Art-Club of IIT Mandi. It is the heart of the creativity in the college. In a small phase it has successfully established its identity in the college
+        <center style="opacity: 1;">Art Geeks is the Art-Club of IIT Mandi. It is the heart of the creativity in the college. In a small phase it has successfully established its identity in the college
         Throughout the time it has involved in different activities including wall paintings, graffiti and many other exciting stuffs</center>
         <br><br>
         </div>
         </div>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
-        <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Events</h2>
-        <br>
-        <div style="padding: 10px; box-shadow: 15px 15px 5px grey; border-radius: 15px 50px; background-image: linear-gradient(to bottom right, #F5DEB3, #FFFAF0)">
+        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
+        <h2 style="text-align:center;font-family: 'Roboto Condensed', sans-serif;">Events</h2>
+        <div style="background: rgba(255, 255, 255, 0.4);">
         <h3><center>Vibgyor</center></h3>
         <hr style="border-width: 5px; border-radius: 3px; width:100px; background-color: blueviolet;">
         <p>Vibgyor is the annual intracollege fest of IIT Mandi exclucively organised by the ArtGeeks for the encouaging of involvement of the students in art related activities.</p>
@@ -118,10 +260,7 @@
             <li>Painting</li>
         </ul>
             <p><b>Participate Open for 2018</b> : <a href="https://artgeeksiitmandi.000webhostapp.com/participation.html">Click Here</a></p>
-        </div>
-            <br><br><br><br>
-        <div style="padding: 10px; box-shadow: 15px 15px 5px grey; border-radius: 15px 50px; background-image: linear-gradient(to bottom right, #FFFACD, Lavender)">
-        <br>
+        <br><br>
         <h3><center>Exodia</center></h3>
         <hr style="border-width: 5px; border-radius: 3px; width:100px; background-color: blueviolet">
         <p>Exodia is the annual cultural and technical fest of IIT Mandi. It have the events organised by all the technical and cultural society of IIT Mandi</p>
@@ -133,7 +272,7 @@
         </ul>
         <br>    
         </div>
-        </div>
+        </div>                                                                                                                                                 
         <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
         <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Activities</h2>
         <br>
@@ -160,7 +299,7 @@
         <div>
         <div class="row">
         <div class="col-md-6 col-sm-12">
-            <p style="text-align: left; font-size: 20px;"><img src="members/nisha@2015.jpg" style="width: 40px;height: 40px;">&nbsp;Nisha Shivankar Kumari</p> 
+            <p style="text-align: left; font-size: 15px;"><img src="members/nisha@2015.jpg" style="width: 40px;height: 40px;">&nbsp;Nisha Shivankar Kumari</p> 
         </div>
         <div style="text-align: right;" class="col-md-6 col-sm-12">
             <a href="https://www.facebook.com/slytherinPrncss/"><img src="connect/fb-2.svg" style="width: 30px;height: 30px">
@@ -186,31 +325,31 @@
         <br>
         <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/fresh-18.png" style="width: 100%; height:250px;">
+        <img src="act-posters/fresh-18.png" style="width: 100%; height:300px;">
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/ex-18-1.jpg" style="width: 100%; height:250px;">
+        <img src="act-posters/ex-18-1.jpg" style="width: 100%; height:300px;">
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/ex-18-2.jpg" style="width: 100%; height:250px;">
+        <img src="act-posters/ex-18-2.jpg" style="width: 100%; height:300px;">
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/vib-17-1.jpg" style="width: 100%; height:250px;">
+        <img src="act-posters/vib-17-1.jpg" style="width: 100%; height:300px;">
             </div>
         </div>
         <br>
         <div class="collapse row" id="more_event">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/vib-17-2.jpg" style="width: 100%; height:250px;">
+        <img src="act-posters/vib-17-2.jpg" style="width: 100%; height:300px;">
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/vib-17-3.jpg" style="width: 100%; height:250px;">
+        <img src="act-posters/vib-17-3.jpg" style="width: 100%; height:300px;">
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/vib-17-4.jpg" style="width: 100%; height:250px;">
+        <img src="act-posters/vib-17-4.jpg" style="width: 100%; height:300px;">
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <img src="act-posters/vib-17-5.jpg" style="width: 100%; height:250px;">
+        <img src="act-posters/vib-17-5.jpg" style="width: 100%; height:300px;">
             </div>
         <br>
         </div>
@@ -278,5 +417,6 @@
         </div>
         <br>
         <div class="container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
+        </div>
     </body>
 </html>
