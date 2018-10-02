@@ -120,7 +120,7 @@
                 }
             }
             #main-body {
-/*              transition-delay: 2s;*/
+             transition-delay: 2s;
               position: relative;
               -webkit-animation-name: animatebottom;
               -webkit-animation-duration: 1s;
@@ -140,7 +140,7 @@
 
         </style>
      </head>
-    <body onload="myLoaderFunction()">
+    <body>
     <div id="loader">
         <div class="loader-inner">
             <div class="loader-line-wrap">
@@ -161,15 +161,14 @@
         </div>
     </div>
     <script>
-    var myVar;
-
-    function myLoaderFunction(){
-        myVar = setTimeout(showPage, 1000);
-    }  
-    function showPage(){
-        document.getElementById("loader").style.display="none";
-        document.getElementById("main-body").style.display="block";
-    }
+    $(function(){
+        setTimeout(function(){
+            $('#loader').fadeOut('slow',function(){
+                $(this).remove();
+                $('#main-body').css('display','block');
+            });
+        },2000);
+    });
     </script>
     <div id="main-body" style="display: none">
     <div id="mySidenav" class="sidenav">
