@@ -12,6 +12,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
         <style>
             @media only screen and (min-width: 768px){
             body{
@@ -150,7 +151,81 @@
               to{ bottom:0; opacity:1 }
             }
 
+            .ml10 {
+              position: relative;
+              font-weight: 900;
+              font-size: 1.5em;
+            }
+
+            .ml10 .text-wrapper {
+              position: relative;
+              display: inline-block;
+              padding-top: 0.2em;
+              padding-right: 0.05em;
+              padding-bottom: 0.1em;
+              overflow: hidden;
+            }
+
+            .ml10 .letter {
+              display: inline-block;
+              line-height: 1em;
+              transform-origin: 0 0;
+            }
+
+            @media only screen and (min-width: 768px){
+              .ml5 {
+                position: relative;
+                font-weight: 900;
+                font-size: 5em;
+                color: #402d2d;
+              }
+            }
+
+            @media only screen and (max-width: 768px){
+              .ml5 {
+                position: relative;
+                font-weight: 900;
+                font-size: 3.5em;
+                color: #402d2d;
+              }
+            }
+
+            .ml5 .text-wrapper {
+              position: relative;
+              display: inline-block;
+              padding-top: 0.1em;
+              padding-right: 0.05em;
+              padding-bottom: 0.15em;
+              line-height: 1em;
+            }
+
+            .ml5 .line {
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              height: 4px;
+              width: 100%;
+              background-color: #402d2d;
+              transform-origin: 0.5 0;
+            }
+
+            .ml5 .ampersand {
+              font-family: Baskerville, "EB Garamond", serif;
+              font-style: italic;
+              font-weight: 400;
+              width: 1em;
+              margin-right: -0.1em;
+              margin-left: -0.1em;
+            }
+
+            .ml5 .letters {
+              display: inline-block;
+              opacity: 0;
+            }
         </style>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      </head>
     <body>
     <div class="fixed-bg"></div>
@@ -183,19 +258,9 @@
         },2000);
     });
     </script>
-    <div id="main-body" style="display: none">
-    <div id="mySidenav" class="sidenav">
-      <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><img src="connect/fb-2.svg" style="height: 40px; width: 40px;"></a>
-      <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><img src="connect/insta.png" style="height: 40px; width: 40px;"></a>
-      <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><img src="connect/email.png" style="height: 40px; width: 40px;"></a>
-      <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
-    </div>
-    <div class="container-fluid">
-      <br>
-        <center><p style=" font-size: 40px;font-family: 'Eczar'; serif">ArtGeeks</p></center>
-    </div>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-        <img src="download.jpg" height=30px; width=130px style="margin-top: 4px;">
+    <div style="min-height: 800px; background-image:url(img/5c9e595493760.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+        <!--<img src="download.jpg" height=30px; width=130px style="margin-top: 4px;">-->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -216,17 +281,44 @@
             </ul>
           </div>  
         </nav>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12" style="margin-top: 2rem">
+        <h1 class="ml5" style="margin-top: 20%; margin-left:10%">
+          <span class="text-wrapper">
+            <span class="line line1"></span>
+            <span class="letters letters-left">Art</span>
+            <span class="letters letters-right">Geeks</span>
+            <span class="line line2"></span>
+          </span>
+        </h1>
+      <p class="ml10" style="margin-left:10%">
+        <span class="text-wrapper">
+          <span class="letters">IIT Mandi</span>
+        </span>
+      </p>
+      <center style="margin-top: 10%">
+      <a href="https://www.facebook.com/artGeeksIITM/"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
+      &nbsp;&nbsp;<a href="https://www.instagram.com/artgeeks_iitmandi/"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
+      &nbsp;&nbsp;<a href="mailto:artgeeks@iitmandi.ac.in"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
+      </center>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </div>
+    <div id="mySidenav" class="sidenav" style="display:none">
+      <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
+      <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
+      <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
+      <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
+    </div>
+    <div class="container-fluid">
+      </div>
+        <!-- <div class="container-fluid col-lg-10 col-md-10 col-sm-12" style="margin-top: 2rem">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
-          <!-- Indicators -->
+        
           <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
           </ul>
 
-          <!-- The slideshow -->
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="1.jpg" alt="First">
@@ -239,7 +331,6 @@
             </div>
           </div>
 
-          <!-- Left and right controls -->
           <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </a>
@@ -247,7 +338,7 @@
             <span class="carousel-control-next-icon"></span>
           </a>
         </div>
-        </div>
+        </div> -->
         <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
         <h2 style="text-align:center; margin-top: 20px;font-family: 'Roboto Condensed', sans-serif;">About</h2>
         <div style="background: rgba(255, 255, 255, 0.4);">
@@ -429,6 +520,88 @@
         </div>
         <br>
         <div class="container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
-        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            // Wrap every letter in a span
+            $('.ml10 .letters').each(function(){
+              $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+            });
+
+            anime.timeline({loop: true})
+              .add({
+                targets: '.ml10 .letter',
+                rotateY: [-90, 0],
+                duration: 900,
+                delay: function(el, i) {
+                  return 45 * i;
+                }
+              }).add({
+                targets: '.ml10',
+                opacity: 0,
+                duration: 1200,
+                easing: "easeOutExpo",
+                delay: 900
+              });
+
+
+              anime.timeline({loop: true})
+              .add({
+                targets: '.ml5 .line',
+                opacity: [0.5,1],
+                scaleX: [0, 1],
+                easing: "easeInOutExpo",
+                duration: 700
+              }).add({
+                targets: '.ml5 .line',
+                duration: 600,
+                easing: "easeOutExpo",
+                translateY: function(e, i, l) {
+                  var offset = -0.625 + 0.625*2*i;
+                  return offset + "em";
+                }
+              }).add({
+                targets: '.ml5 .ampersand',
+                opacity: [0,1],
+                scaleY: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+              }).add({
+                targets: '.ml5 .letters-left',
+                opacity: [0,1],
+                translateX: ["0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 500,
+                offset: '-=300'
+              }).add({
+                targets: '.ml5 .letters-right',
+                opacity: [0,1],
+                translateX: ["-0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+              }).add({
+                targets: '.ml5',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 800
+              });
+        </script>
+        <script>
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function() {scrollFunction()};
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+              document.getElementById("mySidenav").style.display = "block";
+            } else {
+              document.getElementById("mySidenav").style.display = "none";
+            }
+          }
+        </script>
     </body>
 </html>
