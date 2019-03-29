@@ -74,7 +74,7 @@
             
             @media screen and (max-width: 768px){
                 .sidenav{
-                    display: none;
+                    visibility: hidden;
                 }
             }
             @media only screen and (max-width: 768px)
@@ -106,4 +106,22 @@
             */
             .body{
                 background-color: blue;
+            }
+            .rounded-circle{
+                filter: grayscale(100%);
+            }
+            .rounded-circle:hover{
+                transform: scale(1.1);
+                transition: 1s;
+                filter: grayscale(0%);
+            }
+            .mem_name{
+                font-family: 'Baloo Chettan', cursive;
+                font-size: 20px;
+            }
+            .year-num{
+                font-weight: bolder;
+                font-size: 30px;
+                font-family: 'Lobster', cursive;
+                text-decoration-line: underline;
             }
