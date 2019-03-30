@@ -29,13 +29,19 @@
             }
             @media only screen and (max-width: 768px){
             .fixed-bg{
-                background-image: url("compressjpeg-1/wallpaper-3-min.jpg");
-                position: fixed;
-                background-size: cover;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
+                    background-image: url("compressjpeg-1/wallpaper-3-min.jpg");
+                    position: fixed;
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
                 }
+            .bg-text{
+                    font-size: 10px;
+                }
+            .member_sub{
+                font-size: 5px;
+            }
             }
             /* Position text in the middle of the page/image */
             .bg-text {
@@ -48,9 +54,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 2;
+            z-index: 3;
             width: 80%;
-            padding: 20px;
+            /* padding: 5px; */
             text-align: center;
             }
             #member_head{
@@ -60,7 +66,6 @@
                 text-decoration-line: underline;
             }
             #member_sub{
-                /* font-weight: 200; */
                 font-size: 1.5em;
             }
         </style>
@@ -97,11 +102,11 @@
         </ul>
     </div>  
     </nav>
-    <div style="background-image: url(img/tram.jpg); filter: blur(3px); -webkit-filter: blur(3px); min-height: 800px; background-color:burlywood; background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <div style="z-index: 2;background-image: url(img/tram.jpg); filter: blur(3px); -webkit-filter: blur(3px); min-height: 800px; background-color:burlywood; background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: center;">
     </div>
     <div class="bg-text">
-    <h1 id="member_head">Members</h1>
-    <p id="member_sub">ArtGeeks - <i style="font-family: 'Yatra One', cursive;">एक परिवार है</i></p>
+        <p id="member_head">Members</p>
+        <p id="member_sub">ArtGeeks - <i style="font-family: 'Yatra One', cursive;">एक परिवार है</i></p>
     </div>
     <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
     <div class="container-fluid col-12">
