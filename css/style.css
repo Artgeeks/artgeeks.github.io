@@ -133,8 +133,8 @@
             .year-num{
                 font-weight: bolder;
                 font-size: 30px;
-                font-family: 'Lobster', cursive;
-                text-decoration-line: underline;
+                font-family: 'Baloo Chettan', cursive;
+                /* text-decoration-line: underline; */
             }
 
             #myBtn {

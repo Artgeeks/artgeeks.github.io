@@ -181,7 +181,7 @@
                 font-weight: 900;
                 font-size: 5em;
                 color: #402d2d;
-                margin-top: 20%; 
+                padding-top: 20%; 
                 margin-left:10%;
               }
             }
@@ -192,7 +192,7 @@
                 font-weight: 900;
                 font-size: 3.5em;
                 color: #402d2d;
-                margin-top: 35%; 
+                padding-top: 35%; 
                 margin-left:10%;
               }
             }
@@ -266,29 +266,28 @@
     });
     </script>
     <button  onclick="topFunction()" id="myBtn" ><i class="fas fa-angle-up" style="font-size: 20px"></i></button>
-    <div style="min-height: 800px; background-color:burlywood;background-image:url(img/5c9e595493760.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-        <!--<img src="download.jpg" height=30px; width=130px style="margin-top: 4px;">-->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="members.html">Member</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="gallery.html">Gallery</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li> 
-            </ul>
-          </div>  
-        </nav>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="members.html">Member</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li> 
+          </ul>
+        </div>  
+      </nav>
+    <div style="min-height: 800px; background-color:burlywood; background-image:url(img/5c9e595493760.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
         <h1 class="ml5">
           <span class="text-wrapper">
             <span class="line line1"></span>
@@ -601,7 +600,7 @@
         </script>
         <script>
           // When the user scrolls down 20px from the top of the document, show the button
-          window.onscroll = function() {scrollFunction()};
+          window.onscroll = function() {scrollFunction(); scrollFunction2()};
 
           function scrollFunction() {
             if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -610,22 +609,19 @@
               document.getElementById("mySidenav").style.display = "none";
             }
           }
-
-          window.onscroll = function() {scrollFunction2()};
-
           function scrollFunction2() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.getElementById("myBtn").style.display = "block";
-            } else {
-              document.getElementById("myBtn").style.display = "none";
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+              } else {
+                document.getElementById("myBtn").style.display = "none";
+              }
             }
-          }
 
-          // When the user clicks on the button, scroll to the top of the document
-          function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-          }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
         </script>
     </body>
 </html>

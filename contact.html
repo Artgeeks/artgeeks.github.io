@@ -7,11 +7,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
         <link rel="stylesheet" href="css/style.css">
         <style>
             @media only screen and (min-width: 768px){
             body{
-                background-image: url("compressjpeg-1/wallpaper-5-min.jpg");
+                /* background-image: url("compressjpeg-1/wallpaper-5-min.jpg"); */
+                background-color: burlywood;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -25,7 +27,7 @@
             }
             @media only screen and (max-width: 768px){
             .fixed-bg{
-                background-image: url("compressjpeg-1/wallpaper-5-min.jpg");
+                /* background-image: url("compressjpeg-1/wallpaper-5-min.jpg"); */
                 position: fixed;
                 background-size: cover;
                 width: 100%;
@@ -33,45 +35,72 @@
                 z-index: -1;
                 }
             }
+            @media only screen and (min-width: 640px){
+            .ml6{
+                margin-top: 20%;
+                margin-left: 50%;
+                font-weight: 900;
+                font-size: 4em;
+            }
+            }
+            @media only screen and (max-width: 640px){
+            .ml6{
+                margin-top: 50%;
+                margin-left: 20%;
+                font-weight: 900;
+                font-size: 3em;
+            }
+            }
+
+            .ml6 .text-wrapper {
+            position: relative;
+            display: inline-block;
+            padding-top: 0.2em;
+            padding-right: 0.05em;
+            padding-bottom: 0.1em;
+            overflow: hidden;
+            }
+
+            .ml6 .letter {
+            display: inline-block;
+            line-height: 1em;
+            }
         </style>
         <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet"> 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      </head>
     <body>
     <div class="fixed-bg"></div>
-    <div id="mySidenav" class="sidenav">
-      <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><img src="connect/fb-2.svg" style="height: 40px; width: 40px;"></a>
-      <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><img src="connect/insta.png" style="height: 40px; width: 40px;"></a>
-      <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><img src="connect/email.png" style="height: 40px; width: 40px;"></a>
-      <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
+    <div id="mySidenav" class="sidenav" style="display:none">
+        <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
+        <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
+        <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
+        <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 30px; width: 30px"></a>
     </div> 
-    <div class="container-fluid">
-      <br>
-        <center><p style=" font-size: 40px;font-family: 'Eczar'; serif">ArtGeeks</p></center>
-    </div>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-<!--          <a class="navbar-brand" href="#">Navbar</a>-->
-        <img src="download.jpg" height=30px; width=130px style="margin-top: 4px;">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-              <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
-               </li>
-              <li class="nav-item">
+                </li>
+            <li class="nav-item">
                 <a class="nav-link" href="members.html">Member</a>
-              </li>
-              <li class="nav-item">
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="gallery.html">Gallery</a>
-              </li> 
-              <li class="nav-item">
+            </li> 
+            <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
-              </li> 
+            </li> 
             </ul>
-          </div>  
+        </div>  
         </nav>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
+    <div style="min-height: 800px; background-color:burlywood; background-image:url(img/5c9f7525853b3.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position:center;"></div>
+    <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
             <br>
             <div class="row">
                 <div class="col-md-6 col-sm-12">
@@ -81,12 +110,12 @@
                         <div class="title">Co-ordinator ArtGeeks</div>
                         <p>Connect</p>
                         <p>
-                            <a href="https://www.facebook.com/mayankagagarawal"><img src="connect/fb.png" style="height: 40px; width: 40px;">
+                            <a href="https://www.facebook.com/mayankagagarawal"><i class='fab fa-facebook-f' style="font-size:25px; color:black"></i>
                             </a>
-                            <a href="tel:9479533691"><img src="connect/phone.png" style="height: 40px; width: 40px;"></a>
-                            <a href="mailto:b17128@students.iitmandi.ac.in"><img src="connect/email.png" style="height: 40px; width: 40px;"></a>
+                            <a href="tel:9479533691"><i class="fas fa-phone" style="font-size: 25px; color:black"></i></a>
+                            <a href="mailto:b17128@students.iitmandi.ac.in"><i class='fas fa-envelope' style="font-size:25px; color:black"></i></a>
                         </p>
-                        <p><img src="connect/wp.png" style="height: 40px; width: 40px">:9479533691</p>
+                        <p><i class='fab fa-whatsapp' style="font-size:25px; color:black"></i>: 9479533691</p>
                     </center>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -96,12 +125,12 @@
                         <div class="title">Co-ordinator ArtGeeks</div>
                         <p>Connect</p>
                         <p>
-                            <a href="https://www.facebook.com/shikhar.kumar.35513"><img src="connect/fb.png" style="height: 40px; width: 40px;">
+                            <a href="https://www.facebook.com/shikhar.kumar.35513"><i class='fab fa-facebook-f' style="font-size:25px; color:black"></i>
                             </a>
-                            <a href="tel:8628911981"><img src="connect/phone.png" style="height: 40px;width: 40px;"></a>
-                            <a href="mailto:b17024@students.iitmandi.ac.in"><img src="connect/email.png" style="height: 40px; width: 40px;"></a
+                            <a href="tel:8628911981"><i class="fas fa-phone" style="font-size: 25px; color:black"></i></a>
+                            <a href="mailto:b17024@students.iitmandi.ac.in"><i class='fas fa-envelope' style="font-size:25px; color:black"></i></a
                         </p>
-                        <p><img src="connect/wp.png" style="height: 40px; width: 40px">:9044712547</p>
+                        <p><i class='fab fa-whatsapp' style="font-size:25px; color:black"></i>: 9044712547</p>
                     </center>
                 </div>
             </div>
@@ -113,11 +142,11 @@
                         <h3>ArtGeeks</h3>
                         <p>Main Office: Art Room, D2 Mess Complex, South Campus, IIT Mandi, 175005</p>
                         <p>Connect</p>
-                        <a href="https://www.facebook.com/artGeeksIITM/"><img src="connect/fb.png" style="height: 40px; width: 40px;">
+                        <a href="https://www.facebook.com/artGeeksIITM/"><i class='fab fa-facebook-f' style="font-size:25px; color:black"></i>
                         </a>
-                        <a href="https://www.instagram.com/artgeeks_iitmandi/"><img src="connect/insta.png" style="height: 40px; width: 40px;">
+                        <a href="https://www.instagram.com/artgeeks_iitmandi/"><i class='fab fa-instagram' style="font-size:25px; color:black"></i>
                         </a>
-                        <a href="mailto:artgeeks@iitmandi.ac.in"><img src="connect/email.png" style="height: 40px; width: 40px;"></a>
+                        <a href="mailto:artgeeks@iitmandi.ac.in"><i class='fas fa-envelope' style="font-size:25px; color:black"></i></a>
                     </center>
                 </div>
             </div>
@@ -133,12 +162,12 @@
                         <br>
                         <div class="col-md-6">
                             Connect:
-                            <a href="https://www.facebook.com/purushottam.sinha.31"><img src="connect/fb.png" style="height: 30px; width:30px"></a>
-                            <a href="tel:7355414418"><img src="connect/phone.png" style="height: 30px; width:30px"></a>
-                            <a href="https://github.com/PS-Ddevil"><img src="connect/git.jpg" style="height: 30px; width: 30px"></a>
-                            <a href="mailto:sinhapurushottam911@gmail.com"><img src="connect/email.png" style="height: 30px; widows: 30px;"></a>
+                            <a href="https://www.facebook.com/purushottam.sinha.31"><i class='fab fa-facebook-f' style="font-size:25px; color:black"></i></a>
+                            <a href="tel:7355414418"><i class="fas fa-phone" style="font-size: 25px; color:black"></i></a>
+                            <a href="https://github.com/PS-Ddevil"><i class="fab fa-github" style="font-size: 25px; color:black"></i></a>
+                            <a href="mailto:sinhapurushottam911@gmail.com"><i class='fas fa-envelope' style="font-size:25px; color:black"></i></a>
                             <br>
-                            <img src="connect/wp.png" style="height: 30px; width: 30px">: 9532108220
+                            <i class='fab fa-whatsapp' style="font-size:25px; color:black"></i>: 9532108220
                         </div>
                     </center>
                 </div>
@@ -146,5 +175,39 @@
             <br><hr>
         </div>
         <div class="container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
+        <script>
+        window.onscroll = function() {scrollFunction(); scrollFunction2()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            document.getElementById("mySidenav").style.display = "block";
+        } else {
+            document.getElementById("mySidenav").style.display = "none";
+        }
+        }
+        </script>
+        <script>
+        // Wrap every letter in a span
+        $('.ml6 .letters').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+        });
+
+        anime.timeline({loop: true})
+        .add({
+            targets: '.ml6 .letter',
+            translateY: ["1.1em", 0],
+            translateZ: 0,
+            duration: 750,
+            delay: function(el, i) {
+            return 50 * i;
+            }
+        }).add({
+            targets: '.ml6',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+        </script>
     </body>
 </html>
