@@ -17,7 +17,6 @@
             *{
               scroll-behavior: smooth;
             }
-            body{overflow: hidden;}
             @media only screen and (min-width: 768px){
             body{
                 background-image: url("compressjpeg-1/background-min.jpg");
@@ -33,6 +32,7 @@
                 }
             }
             @media only screen and (max-width: 768px){
+              .not-front{overflow-x: hidden;}
             .fixed-bg{
                 background-image: url("compressjpeg-1/background-min.jpg");
                 position: fixed;
@@ -264,7 +264,8 @@
       <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
     </div>
     <div style="min-height: 800px; background-color:burlywood; background-image:url(img/5c9e595493760.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <div class="sticky-top">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -284,7 +285,8 @@
             </li> 
             </ul>
         </div>  
-        </nav>  
+        </nav> 
+      </div> 
       <h1 class="ml5">
           <span class="text-wrapper">
             <span class="line line1"></span>
@@ -305,39 +307,7 @@
       </center>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     </div>
-    <div class="container-fluid">
-      </div>
-        <!-- <div class="container-fluid col-lg-10 col-md-10 col-sm-12" style="margin-top: 2rem">
-        <div id="demo" class="carousel slide" data-ride="carousel">
-
-        
-          <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
-          </ul>
-
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="1.jpg" alt="First">
-            </div>
-            <div class="carousel-item">
-              <img src="2.jpg" alt="Second">
-            </div>
-            <div class="carousel-item">
-              <img src="3.jpg" alt="Third" >
-            </div>
-          </div>
-
-          <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
-        </div>
-        </div> -->
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
+        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
         <h2 style="text-align:center; margin-top: 20px;font-family: 'Roboto Condensed', sans-serif;">About</h2>
         <div style="background: rgba(255, 255, 255, 0.4);">
         <br><br>
@@ -346,7 +316,7 @@
         <br><br>
         </div>
         </div>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
+        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
         <h2 style="text-align:center;font-family: 'Roboto Condensed', sans-serif;">Events</h2>
         <div style="background: rgba(255, 255, 255, 0.4);">
         <h3><center>Vibgyor</center></h3>
@@ -374,7 +344,7 @@
         <br>    
         </div>
         </div>                                                                                                                                                 
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
+        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
         <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Activities</h2>
         <br>
         <div>
@@ -476,7 +446,7 @@
         <br>
         <br>
         </div>
-        <div class="container-fluid bg-dark" style="color: aliceblue; margin-top:4rem; padding-top: 60px;padding-bottom: 20px">
+        <div class="container-fluid bg-dark not-front" style="color: aliceblue; margin-top:4rem; padding-top: 60px;padding-bottom: 20px">
             <div class="row">
             <div id = "bottom1" class="col-sm-12 col-md-4" >
             <p>Important Links</p>
@@ -517,7 +487,7 @@
         </div>
         </div>
         <br>
-        <div class="container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
+        <div class="not-front container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
