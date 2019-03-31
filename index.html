@@ -255,40 +255,36 @@
             </div>
         </div>
     </div>
-    <script>
-    $(function(){
-        setTimeout(function(){
-            $('#loader').fadeOut('slow',function(){
-                $(this).remove();
-                $('#main-body').css('display','block');
-            });
-        },2000);
-    });
-    </script>
     <button  onclick="topFunction()" id="myBtn" ><i class="fas fa-angle-up" style="font-size: 20px"></i></button>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <div id="mySidenav" class="sidenav" style="display:none">
+      <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
+      <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
+      <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
+      <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
+    </div>
+    <div style="min-height: 800px; background-color:burlywood; background-image:url(img/5c9e595493760.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
+            <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="members.html">Member</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="members.html">Member</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-link" href="gallery.html">Gallery</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
             </li> 
-          </ul>
+            </ul>
         </div>  
-      </nav>
-    <div style="min-height: 800px; background-color:burlywood; background-image:url(img/5c9e595493760.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
-        <h1 class="ml5">
+        </nav>  
+      <h1 class="ml5">
           <span class="text-wrapper">
             <span class="line line1"></span>
             <span class="letters letters-left">Art</span>
@@ -307,12 +303,6 @@
       &nbsp;&nbsp;<a href="mailto:artgeeks@iitmandi.ac.in"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
       </center>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    </div>
-    <div id="mySidenav" class="sidenav" style="display:none">
-      <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
-      <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
-      <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
-      <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
     </div>
     <div class="container-fluid">
       </div>
@@ -622,6 +612,16 @@
               document.body.scrollTop = 0;
               document.documentElement.scrollTop = 0;
             }
+        </script>
+        <script>
+        $(function(){
+            setTimeout(function(){
+                $('#loader').fadeOut('slow',function(){
+                    $(this).remove();
+                    $('#main-body').css('display','block');
+                });
+            },2000);
+        });
         </script>
     </body>
 </html>
