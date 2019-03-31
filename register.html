@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Registered</title>
+        <!-- Firebase Configuration -->
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+    </head>
+    <body>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Competition</th>
+                <th scope="col">Number</th>
+                <th scope="col">Name 1</th>
+                <th scopr='col'>Phone 1</th>
+                <th scope="col">Name 2</th>
+                <th scopr='col'>Phone 2</th>
+                <th scope="col">Name 3</th>
+                <th scopr='col'>Phone 3</th>
+                <th scope="col">Name 4</th>
+                <th scopr='col'>Phone 4</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+                
+    </body>
+    <script>
+        function ins_dat(str, str2){
+            var td_1 = document.createElement('td');
+            td_1.innerHTML = str;
+            str2.appendChild(td_1);
+        }
+        function print_into_table(data){
+            console.log(data);
+            var new_row = document.createElement('tr');
+            var th_1 = document.createElement('th');
+            new_row.appendChild(th_1);
+            if(data.team_size < 4 )
+            {data.Participant_4 = ""; data.Phone_4 = ""}
+            if(data.team_size < 3 )
+            {data.Participant_3 = ""; data.Phone_3 = ""}
+            if(data.team_size < 2 )
+            {data.Participant_2 = ""; data.Phone_2 = ""}
+            ins_dat(data.event, new_row);
+            ins_dat(data.team_size, new_row);
+            ins_dat(data.Participant_1, new_row);
+            ins_dat(data.Phone_1, new_row);
+            ins_dat(data.Participant_2, new_row);
+            ins_dat(data.Phone_2, new_row);
+            ins_dat(data.Participant_3, new_row);
+            ins_dat(data.Phone_3, new_row);
+            ins_dat(data.Participant_4, new_row);
+            ins_dat(data.Phone_4, new_row);
+            console.log(new_row);
+            var tb_bdy = document.getElementById("table-body");
+            tb_bdy.appendChild(new_row);
+        }
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAjKRzOfLuo5w06RiGrislxF4IOrXCEjcc",
+        authDomain: "vibgyor-fest.firebaseapp.com",
+        databaseURL: "https://vibgyor-fest.firebaseio.com",
+        projectId: "vibgyor-fest",
+        storageBucket: "vibgyor-fest.appspot.com",
+        messagingSenderId: "753433277229"
+        };
+        firebase.initializeApp(config);
+        var db = firebase.firestore();
+        db.collection("fest-data").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                print_into_table(doc.data());
+            });
+        });
+    </script>
+</html>

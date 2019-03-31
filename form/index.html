@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vibgyor Registration</title>
+    <meta charset="utf-8">
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+
+    <!-- Firebase Configuration -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    
+    <style>
+        select{
+            width: 60%;
+        }
+    </style>
+</head>
+<body style="background-image: url(5c9da0f1be5f3.png); min-height: 800px; background-color:burlywood; background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
+    <div class="container" style="margin-top: 5%; padding: 50px;background-color: white;">
+    <center><h1>Register</h1></center>
+    <form action="" id="main-form">
+        <div class="form-group">
+            <label for="event_name">Event Name</label>
+            <select onchange="giveoption()" class="form-control" id="event_name" required>
+                <option selected="selected" value="" hidden="hidden">Select a Option</option>
+                <option>Sketching</option>
+                <option>Stone Painting</option>
+                <option>Sketching</option>
+                <option>Acrylic Painting</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="part_no">Number of Participants</label>
+            <select onchange="show_name_ph()" class="form-control" id="part_no">       
+            <option value="1">1</option>
+            </select>
+        </div>
+    </form>
+    </div>
+    <script>
+        window.onload = function(){
+            make_element(1, "Name", "name-tag");
+            make_element(1, "Phone No", "phone-tag");
+            make_button();
+        }
+    </script>
+    <script src="action.js"></script>
+    <script src="firebase.js"></script>
+</body>
+</html>
