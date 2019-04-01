@@ -4,7 +4,7 @@ apiKey: "AIzaSyAZiSblA4pRVSTq4b7VeP-9xIFyQLoFziM",
 authDomain: "artgeeks-fest.firebaseapp.com",
 databaseURL: "https://artgeeks-fest.firebaseio.com",
 projectId: "artgeeks-fest",
-storageBucket: "",
+storageBucket: "artgeeks-fest.appspot.com",
 messagingSenderId: "122810303667"
 };
 firebase.initializeApp(config);
