@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-apiKey: "AIzaSyAjKRzOfLuo5w06RiGrislxF4IOrXCEjcc",
-authDomain: "vibgyor-fest.firebaseapp.com",
-databaseURL: "https://vibgyor-fest.firebaseio.com",
-projectId: "vibgyor-fest",
-storageBucket: "vibgyor-fest.appspot.com",
-messagingSenderId: "753433277229"
+apiKey: "AIzaSyAZiSblA4pRVSTq4b7VeP-9xIFyQLoFziM",
+authDomain: "artgeeks-fest.firebaseapp.com",
+databaseURL: "https://artgeeks-fest.firebaseio.com",
+projectId: "artgeeks-fest",
+storageBucket: "",
+messagingSenderId: "122810303667"
 };
 firebase.initializeApp(config);
 var db = firebase.firestore();
