@@ -16,6 +16,8 @@ form.addEventListener('submit', (e) => {
     const event = $('#event_name').val();
     const num = $('#part_no').val();
     e.preventDefault();
+    $('#main-body').hide();
+    $('#loader').show();
     if(num == 1){
         const name1 = $('#name-tag1').val();
         const phone1 = $('#phone-tag1').val();
