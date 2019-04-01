@@ -27,10 +27,41 @@
         select{
             width: 60%;
         }
+        .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+        .hide{
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-primary">
-    <div class="container" style="margin-top: 5%; padding: 50px;background-color: white;">
+    <div class="loader" id="loader"></div>
+    <div class="container" id="main-body" style="margin-top: 5%; padding: 50px;background-color: white;">
     <center><h1>Register</h1></center>
     <form action="" id="main-form">
         <div class="form-group">
@@ -56,6 +87,7 @@
             make_element(1, "Name", "name-tag");
             make_element(1, "Phone No", "phone-tag");
             make_button();
+            $('#loader').hide();
         }
     </script>
     <script src="action.js"></script>
