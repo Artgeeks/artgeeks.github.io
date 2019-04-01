@@ -39,6 +39,7 @@
                 
     </body>
     <script>
+        var total = 1;
         function ins_dat(str, str2){
             var td_1 = document.createElement('td');
             td_1.innerHTML = str;
@@ -48,6 +49,7 @@
             console.log(data);
             var new_row = document.createElement('tr');
             var th_1 = document.createElement('th');
+            th_1.innerText = total++;
             new_row.appendChild(th_1);
             if(data.team_size < 4 )
             {data.Participant_4 = ""; data.Phone_4 = ""}
