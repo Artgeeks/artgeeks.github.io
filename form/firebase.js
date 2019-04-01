@@ -81,33 +81,33 @@ form.addEventListener('submit', (e) => {
             console.error("Error adding document: ", error);
         });
     }
-    else if(num == 4){
-        const name1 = $('#name-tag1').val();
-        const phone1 = $('#phone-tag1').val();
-        const name2 = $('#name-tag2').val();
-        const phone2 = $('#phone-tag2').val();
-        const name3 = $('#name-tag3').val();
-        const phone3 = $('#phone-tag3').val();
-        const name4 = $('#name-tag4').val();
-        const phone4 = $('#phone-tag4').val();
+    // else if(num == 4){
+    //     const name1 = $('#name-tag1').val();
+    //     const phone1 = $('#phone-tag1').val();
+    //     const name2 = $('#name-tag2').val();
+    //     const phone2 = $('#phone-tag2').val();
+    //     const name3 = $('#name-tag3').val();
+    //     const phone3 = $('#phone-tag3').val();
+    //     const name4 = $('#name-tag4').val();
+    //     const phone4 = $('#phone-tag4').val();
 
-        db.collection('fest-data').add({
-            event: event,
-            team_size: num,
-            Participant_1: name1,
-            Phone_1: phone1,
-            Participant_2: name2,
-            Phone_2: phone2,
-            Participant_3: name3,
-            Phone_3: phone3,
-            Participant_4: name4,
-            Phone_4: phone4
-        }).then(function(docRef) {
-            console.log("Document written with ID: ", docRef.id);
-            location.replace("thanks.html")
-        })
-        .catch(function(error) {
-            console.error("Error adding document: ", error);
-        });
-    }
+    //     db.collection('fest-data').add({
+    //         event: event,
+    //         team_size: num,
+    //         Participant_1: name1,
+    //         Phone_1: phone1,
+    //         Participant_2: name2,
+    //         Phone_2: phone2,
+    //         Participant_3: name3,
+    //         Phone_3: phone3,
+    //         Participant_4: name4,
+    //         Phone_4: phone4
+    //     }).then(function(docRef) {
+    //         console.log("Document written with ID: ", docRef.id);
+    //         location.replace("thanks.html")
+    //     })
+    //     .catch(function(error) {
+    //         console.error("Error adding document: ", error);
+    //     });
+    // }
 });
