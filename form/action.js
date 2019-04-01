@@ -40,7 +40,7 @@ function giveoption(){
         while(num_list.firstChild){
             num_list.removeChild(num_list.firstChild);
         }
-        for(i = 1; i <= 4; i++){
+        for(i = 1; i <= 2; i++){
             var opt = document.createElement("option");
             opt.setAttribute('value', i);
             opt.innerHTML= i;
@@ -55,7 +55,7 @@ function giveoption(){
         while(num_list.firstChild){
             num_list.removeChild(num_list.firstChild);
         }
-        for(i = 1; i <= 3; i++){
+        for(i = 1; i <= 2; i++){
             var opt = document.createElement("option");
             opt.setAttribute('value', i);
             opt.innerHTML= i;
@@ -66,7 +66,7 @@ function giveoption(){
         make_element(1, "Phone No", "phone-tag");
         make_button();
     }
-    else if(name_eve == "Sketching"){
+    else if(name_eve == "Oragami"){
         while(num_list.firstChild){
             num_list.removeChild(num_list.firstChild);
         }
@@ -81,11 +81,41 @@ function giveoption(){
         make_element(1, "Phone No", "phone-tag");
         make_button();
     }
+    else if(name_eve == "Tatoo Making"){
+        while(num_list.firstChild){
+            num_list.removeChild(num_list.firstChild);
+        }
+        for(i = 1; i <= 3; i++){
+            var opt = document.createElement("option");
+            opt.setAttribute('value', i);
+            opt.innerHTML= i;
+            num_list.appendChild(opt);
+        }
+        $('.part-input').remove();
+        make_element(1, "Name", "name-tag");
+        make_element(1, "Phone No", "phone-tag");
+        make_button();
+    }
+    else if(name_eve == "Stencil"){
+        while(num_list.firstChild){
+            num_list.removeChild(num_list.firstChild);
+        }
+        for(i = 1; i <= 3; i++){
+            var opt = document.createElement("option");
+            opt.setAttribute('value', i);
+            opt.innerHTML= i;
+            num_list.appendChild(opt);
+        }
+        $('.part-input').remove();
+        make_element(1, "Name", "name-tag");
+        make_element(1, "Phone No", "phone-tag");
+        make_button();
+    }
     else if(name_eve == "Acrylic Painting"){
         while(num_list.firstChild){
             num_list.removeChild(num_list.firstChild);
         }
-        for(i = 1; i <= 4; i++){
+        for(i = 1; i <= 1; i++){
             var opt = document.createElement("option");
             opt.setAttribute('value', i);
             opt.innerHTML= i;
