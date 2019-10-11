@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Vibgyor Registration</title>
     <meta charset="utf-8">
-    <meta http-equiv=”Pragma” content=”no-cache”>
-    <meta http-equiv=”Expires” content=”-1″>
-    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -17,75 +18,91 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
     <!-- Firebase Configuration -->
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-    
+
     <style>
-        select{
+        select {
             width: 60%;
         }
+
         .loader {
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #3498db;
-        width: 120px;
-        height: 120px;
-        -webkit-animation: spin 2s linear infinite; /* Safari */
-        animation: spin 2s linear infinite;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
         }
 
         /* Safari */
         @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
         }
 
         @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
-        .hide{
+        .hide {
             display: none;
         }
     </style>
+
 </head>
+
 <body class="bg-primary">
     <div class="loader" id="loader"></div>
     <div class="container" id="main-body" style="margin-top: 5%; padding: 50px;background-color: white;">
-    <center><h1>Register</h1></center>
-    <form action="" id="main-form">
-        <div class="form-group">
-            <label for="event_name">Event Name</label>
-            <select onchange="giveoption()" class="form-control" id="event_name" required>
-                <option selected="selected" value="" hidden="hidden">Select a Option</option>
-                <option>Sketching</option>
-                <option>Stone Painting</option>
-                <option>Stencil</option>
-                <option>Acrylic Painting</option>
-                <option>Oragami</option>
-                <option>Tatoo Making</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="part_no">Number of Participants</label>
-            <select onchange="show_name_ph()" class="form-control" id="part_no">       
-            <option value="1">1</option>
-            </select>
-        </div>
-    </form>
+        <center>
+            <h1>Register</h1>
+        </center>
+        <form action="" id="main-form">
+            <div class="form-group">
+                <label for="event_name">Event Name</label>
+                <select onchange="giveoption()" class="form-control" id="event_name" required>
+                    <option selected="selected" value="" hidden="hidden">Select a Option</option>
+                    <option>Sketching</option>
+                    <option>Stone Painting</option>
+                    <option>Stencil</option>
+                    <option>Acrylic Painting</option>
+                    <option>Oragami</option>
+                    <option>Tatoo Making</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="part_no">Number of Participants</label>
+                <select onchange="show_name_ph()" class="form-control" id="part_no">
+                    <option value="1">1</option>
+                </select>
+            </div>
+        </form>
     </div>
     <script>
-        window.onload = function(){
+        window.onload = function () {
             make_element(1, "Name", "name-tag");
             make_element(1, "Phone No", "phone-tag");
             make_button();
@@ -95,4 +112,5 @@
     <script src="action.js"></script>
     <script src="firebase.js"></script>
 </body>
+
 </html>
