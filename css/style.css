@@ -1,154 +1,172 @@
-        #mySidenav a {
-            position: fixed;
-            left: -80px;
-            transition: 0.3s;
-            padding: 15px;
-            padding-left: 25px;
-            width: 120px;
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            border-radius: 0 5px 5px 0;
-        }
+#mySidenav {
+ z-index: 1000;
+ position: fixed;
+}
 
-        #mySidenav a:hover {
-            left: 0;
-        }
+#mySidenav a {
+  position: fixed;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  padding-left: 25px;
+  width: 120px;
+  text-decoration: none;
+  border-radius: 0 5px 5px 0;
+}
 
-        #fb {
-            top: 260px;
-            background-color: #4CAF50;
-        }
+#mySidenav a>i {
+  font-size: 30px;
+  color: white;
+}
 
-        #insta {
-            top: 320px;
-            background-color: #2196F3;
-        }
+#mySidenav a:hover {
+  left: 0;
+}
 
-        #mail {
-            top: 380px;
-            background-color: #f44336;
-        }
+#fb {
+  top: 260px;
+  background-color: #3b5998;
+}
 
-        #contact {
-            top: 440px;
-            background-color: #555
-        }
-/*
-            .row{
-                margin: 15px;
-            }
-*/
-            .overlay{
-                text-decoration: none;
-                position: absolute;
-                bottom: 0;
-                background: rgb(0,0,0);
-                background: rgba(0,0,0,0.5);
-                color: #f1f1f1;
-                width: 100%;
-                transition: 1s ease;
-                opacity:0;
-                color: white;
-                font-size:20px;
-                padding: 20px;
-                text-align: center;
-            }
-            .gallery-container {
-              position: relative;
-            }
+#insta {
+  top: 320px;
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
 
-            .image {
-              display: block;
-              width: 100%;
-              transition: 1s ease;
-            }
-            
-            .gallery-container:hover .overlay {
-                opacity: 0.8;
-            }
-            
-            .gallery-container:hover .image{
-                opacity: 0.5;
-            }
-            
-            @media screen and (max-width: 768px){
-                .sidenav{
-                    visibility: hidden;
-                }
-            }
-            @media only screen and (max-width: 768px)
-            {
-                #content-window{
-                    margin-top: 10rem;
-                    content: none;
-                }  
-                #main-page-link{
-                    margin-top: 30%;
-                } 
-            }
-            @media only screen and (max-width: 500px){
-                #main-page-link{
-                    margin-top: 60%;
-                } 
-            }
-            @media only screen and (min-width: 768px){
-                #bottom1{
-                    margin-left: 100px;
-                }
-                #main-page-link{
-                    margin-top: 10%;
-                }
-            }
-            @media only screen and (max-width: 992px)
-            {
-                #content-window{
-                    margin-top: 2rem;
-                }   
-            }
-              /* Make the image fully responsive */
-            .carousel-inner img {
-                  width: 100%;
-            }
-            /*
-            .container-fluid{
-                           margin-top: 4rem; 
-                        }
-            */
-            .body{
-                background-color: blue;
-            }
-            .rounded-circle{
-                filter: grayscale(100%);
-            }
-            .rounded-circle:hover{
-                transform: scale(1.1);
-                transition: 1s;
-                filter: grayscale(0%);
-            }
-            .mem_name{
-                font-family: 'Baloo Chettan', cursive;
-                font-size: 20px;
-            }
-            .year-num{
-                font-weight: bolder;
-                font-size: 30px;
-                font-family: 'Baloo Chettan', cursive;
-                /* text-decoration-line: underline; */
-            }
+#mail {
+  top: 380px;
+  background-color: #f44336;
+}
 
-            #myBtn {
-                display: none;
-                position: fixed;
-                bottom: 20px;
-                right: 30px;
-                z-index: 99;
-                font-size: 18px;
-                border: none;
-                outline: none;
-                background-color: red;
-                color: white;
-                cursor: pointer;
-                padding: 15px;
-                border-radius: 4px;
-              }
+#contact {
+  top: 440px;
+  background-color: #555
+}
+
+.overlay {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: 1s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-container {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  transition: 1s ease;
+}
+
+.gallery-container:hover .overlay {
+  opacity: 0.8;
+}
+
+.gallery-container:hover .image {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #content-window {
+    margin-top: 10rem;
+    content: none;
+  }
+
+  #main-page-link {
+    margin-top: 30%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #main-page-link {
+    margin-top: 60%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #bottom1 {
+    margin-left: 100px;
+  }
+
+  #main-page-link {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #content-window {
+    margin-top: 2rem;
+  }
+}
+
+.carousel-inner img {
+  width: 100%;
+}
+
+.body {
+  background-color: blue;
+}
+
+.rounded-circle {
+  filter: grayscale(100%);
+}
+
+.rounded-circle:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  filter: grayscale(0%);
+}
+
+.mem_name {
+  font-family: 'Baloo Chettan', cursive;
+  font-size: 20px;
+}
+
+.year-num {
+  font-weight: bolder;
+  font-size: 30px;
+  font-family: 'Baloo Chettan', cursive;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.content{
+  background-color:rgba(255, 255, 255, 0.4);
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
