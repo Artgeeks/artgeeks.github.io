@@ -1,436 +1,526 @@
+<!DOCTYPE html>
+
 <html>
-    <head>
-        <title>Art Geeks|IIT Mandi</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="ArtGeeks IIT Mandi">
-        <meta name="description" content="This is the official website of ArtGeeks - The Art Club of IIT Mandi">
-        <meta name="keywords" content="Art, ArtGeeks, IIT Mandi, IIT Mandi Cultural Society, artgeeks"> 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet"> 
-        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-        <style>
-            *{
-              scroll-behavior: smooth;
-            }
-            @media only screen and (min-width: 768px){
-            body{
-                background-image: url("compressjpeg-1/background-min.jpg");
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-attachment: fixed;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position:center;
-                min-height: 100%;
-                min-width: 100%;
-                }
-            }
-            @media only screen and (max-width: 768px){
-              .not-front{overflow-x: hidden;}
-            .fixed-bg{
-                background-image: url("compressjpeg-1/background-min.jpg");
-                position: fixed;
-                background-size: cover;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                }
-            }
-            #loader {
-                display: block;
-                background: #fff;
-/*                background: radial-gradient(#222, #000);*/
-                bottom: 0;
-                left: 0;
-                overflow: hidden;
-                position: fixed;
-                right: 0;
-                top: 0;
-                z-index: 99999;
-            }
 
-            .loader-inner {
-                bottom: 0;
-                height: 60px;
-                left: 0;
-                margin: auto;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 100px;
-            }
+<head>
+  <title>Art Geeks|IIT Mandi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="ArtGeeks IIT Mandi">
+  <meta name="description" content="This is the official website of ArtGeeks - The Art Club of IIT Mandi">
+  <meta name="keywords" content="Art, ArtGeeks, IIT Mandi, IIT Mandi Cultural Society, artgeeks">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-            .loader-line-wrap {
-                animation: 
-                    spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
-                ;
-                box-sizing: border-box;
-                height: 50px;
-                left: 0;
-                overflow: hidden;
-                position: absolute;
-                top: 0;
-                transform-origin: 50% 100%;
-                width: 100px;
-            }
-            .loader-line {
-                border: 4px solid transparent;
-                border-radius: 100%;
-                box-sizing: border-box;
-                height: 100px;
-                left: 0;
-                margin: 0 auto;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 100px;
-            }
-            .loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
-            .loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
-            .loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
-            .loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
-            .loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
 
-            .loader-line-wrap:nth-child(1) .loader-line {
-                border-color: hsl(0, 80%, 60%);
-                height: 90px;
-                width: 90px;
-                top: 7px;
-            }
-            .loader-line-wrap:nth-child(2) .loader-line {
-                border-color: hsl(60, 80%, 60%);
-                height: 76px;
-                width: 76px;
-                top: 14px;
-            }
-            .loader-line-wrap:nth-child(3) .loader-line {
-                border-color: hsl(120, 80%, 60%);
-                height: 62px;
-                width: 62px;
-                top: 21px;
-            }
-            .loader-line-wrap:nth-child(4) .loader-line {
-                border-color: hsl(180, 80%, 60%);
-                height: 48px;
-                width: 48px;
-                top: 28px;
-            }
-            .loader-line-wrap:nth-child(5) .loader-line {
-                border-color: hsl(240, 80%, 60%);
-                height: 34px;
-                width: 34px;
-                top: 35px;
-            }
+    @media only screen and (min-width: 768px) {
+      body {
+        background-image: url("compressjpeg-1/background-min.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100%;
+        min-width: 100%;
+      }
+    }
 
-            @keyframes spin {
-                0%, 15% {
-                    transform: rotate(0);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-            #main-body {
-             transition-delay: 2s;
-              position: relative;
-              -webkit-animation-name: animatebottom;
-              -webkit-animation-duration: 1s;
-              animation-name: animatebottom;
-              animation-duration: 1s
-            }
+    @media only screen and (max-width: 768px) {
+      .not-front {
+        overflow-x: hidden;
+      }
 
-            @-webkit-keyframes animatebottom {
-              from { bottom:-100px; opacity:0 } 
-              to { bottom:0px; opacity:1 }
-            }
+      .fixed-bg {
+        background-image: url("compressjpeg-1/background-min.jpg");
+        position: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+    }
 
-            @keyframes animatebottom { 
-              from{ bottom:-100px; opacity:0 } 
-              to{ bottom:0; opacity:1 }
-            }
+    #loader {
+      display: block;
+      background: #fff;
+      /*                background: radial-gradient(#222, #000);*/
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 99999;
+    }
 
-            .ml10 {
-              position: relative;
-              font-weight: 900;
-              font-size: 1.5em;
-            }
+    .loader-inner {
+      bottom: 0;
+      height: 60px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100px;
+    }
 
-            .ml10 .text-wrapper {
-              position: relative;
-              display: inline-block;
-              padding-top: 0.2em;
-              padding-right: 0.05em;
-              padding-bottom: 0.1em;
-              overflow: hidden;
-            }
+    .loader-line-wrap {
+      animation:
+        spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+      box-sizing: border-box;
+      height: 50px;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      transform-origin: 50% 100%;
+      width: 100px;
+    }
 
-            .ml10 .letter {
-              display: inline-block;
-              line-height: 1em;
-              transform-origin: 0 0;
-            }
+    .loader-line {
+      border: 4px solid transparent;
+      border-radius: 100%;
+      box-sizing: border-box;
+      height: 100px;
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100px;
+    }
 
-            @media only screen and (min-width: 768px){
-              .ml5 {
-                position: relative;
-                font-weight: 900;
-                font-size: 5em;
-                color: #402d2d;
-                padding-top: 20%; 
-                margin-left:10%;
-              }
-            }
+    .loader-line-wrap:nth-child(1) {
+      animation-delay: -50ms;
+    }
 
-            @media only screen and (max-width: 768px){
-              .ml5 {
-                position: relative;
-                font-weight: 900;
-                font-size: 3.5em;
-                color: #402d2d;
-                padding-top: 35%; 
-                margin-left:10%;
-              }
-            }
+    .loader-line-wrap:nth-child(2) {
+      animation-delay: -100ms;
+    }
 
-            .ml5 .text-wrapper {
-              position: relative;
-              display: inline-block;
-              padding-top: 0.1em;
-              padding-right: 0.05em;
-              padding-bottom: 0.15em;
-              line-height: 1em;
-            }
+    .loader-line-wrap:nth-child(3) {
+      animation-delay: -150ms;
+    }
 
-            .ml5 .line {
-              position: absolute;
-              left: 0;
-              top: 0;
-              bottom: 0;
-              margin: auto;
-              height: 4px;
-              width: 100%;
-              background-color: #402d2d;
-              transform-origin: 0.5 0;
-            }
+    .loader-line-wrap:nth-child(4) {
+      animation-delay: -200ms;
+    }
 
-            .ml5 .ampersand {
-              font-family: Baskerville, "EB Garamond", serif;
-              font-style: italic;
-              font-weight: 400;
-              width: 1em;
-              margin-right: -0.1em;
-              margin-left: -0.1em;
-            }
+    .loader-line-wrap:nth-child(5) {
+      animation-delay: -250ms;
+    }
 
-            .ml5 .letters {
-              display: inline-block;
-              opacity: 0;
-            }
-        </style>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     </head>
-    <body>
-    <div class="fixed-bg"></div>
-    <div id="loader">
-        <div class="loader-inner">
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-        </div>
+    .loader-line-wrap:nth-child(1) .loader-line {
+      border-color: hsl(0, 80%, 60%);
+      height: 90px;
+      width: 90px;
+      top: 7px;
+    }
+
+    .loader-line-wrap:nth-child(2) .loader-line {
+      border-color: hsl(60, 80%, 60%);
+      height: 76px;
+      width: 76px;
+      top: 14px;
+    }
+
+    .loader-line-wrap:nth-child(3) .loader-line {
+      border-color: hsl(120, 80%, 60%);
+      height: 62px;
+      width: 62px;
+      top: 21px;
+    }
+
+    .loader-line-wrap:nth-child(4) .loader-line {
+      border-color: hsl(180, 80%, 60%);
+      height: 48px;
+      width: 48px;
+      top: 28px;
+    }
+
+    .loader-line-wrap:nth-child(5) .loader-line {
+      border-color: hsl(240, 80%, 60%);
+      height: 34px;
+      width: 34px;
+      top: 35px;
+    }
+
+    @keyframes spin {
+
+      0%,
+      15% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #main-body {
+      transition-delay: 2s;
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+
+    @-webkit-keyframes animatebottom {
+      from {
+        bottom: -100px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0px;
+        opacity: 1
+      }
+    }
+
+    @keyframes animatebottom {
+      from {
+        bottom: -100px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    .ml10 {
+      position: relative;
+      font-weight: 900;
+      font-size: 1.5em;
+    }
+
+    .ml10 .text-wrapper {
+      position: relative;
+      display: inline-block;
+      padding-top: 0.2em;
+      padding-right: 0.05em;
+      padding-bottom: 0.1em;
+      overflow: hidden;
+    }
+
+    .ml10 .letter {
+      display: inline-block;
+      line-height: 1em;
+      transform-origin: 0 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .ml5 {
+        position: relative;
+        font-weight: 900;
+        font-size: 5em;
+        color: #402d2d;
+        padding-top: 20%;
+        margin-left: 10%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .ml5 {
+        position: relative;
+        font-weight: 900;
+        font-size: 3.5em;
+        color: #402d2d;
+        padding-top: 35%;
+        margin-left: 10%;
+      }
+    }
+
+    .ml5 .text-wrapper {
+      position: relative;
+      display: inline-block;
+      padding-top: 0.1em;
+      padding-right: 0.05em;
+      padding-bottom: 0.15em;
+      line-height: 1em;
+    }
+
+    .ml5 .line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 4px;
+      width: 100%;
+      background-color: #402d2d;
+      transform-origin: 0.5 0;
+    }
+
+    .ml5 .ampersand {
+      font-family: Baskerville, "EB Garamond", serif;
+      font-style: italic;
+      font-weight: 400;
+      width: 1em;
+      margin-right: -0.1em;
+      margin-left: -0.1em;
+    }
+
+    .ml5 .letters {
+      display: inline-block;
+      opacity: 0;
+    }
+  </style>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <div class="fixed-bg"></div>
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
     </div>
-    <button  onclick="topFunction()" id="myBtn" ><i class="fas fa-angle-up" style="font-size: 20px"></i></button>
-    <div id="mySidenav" class="sidenav" style="display:none">
-      <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
-      <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
-      <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
-      <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
-    </div>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+  </div>
+
+
+  <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up" style="font-size: 20px"></i></button>
+  <div id="mySidenav" class="sidenav" style="display:none">
+    <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class="fab fa-facebook-f"
+        style="font-size:30px; color:black"></i></a>
+    <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class="fab fa-instagram"
+        style="font-size:30px; color: black"></i></a>
+    <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class="fas fa-envelope"
+        style="font-size:30px; color: black"></i></a>
+    <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
+  </div>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
+      <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-            </li>
-        <li class="nav-item">
-            <a class="nav-link" href="members.html">Member</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-        </li> 
+          <a class="nav-link" href="members.html">Member</a>
+        </li>
         <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-        </li> 
-        </ul>
-    </div>  
-    </nav> 
-    <div style="min-height: 800px; background-color:burlywood; background-image:url(img/5c9e595493760.jpg); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
-      <h1 class="ml5">
-          <span class="text-wrapper">
-            <span class="line line1"></span>
-            <span class="letters letters-left">Art</span>
-            <span class="letters letters-right">Geeks</span>
-            <span class="line line2"></span>
-          </span>
-        </h1>
-      <p class="ml10" style="margin-left:10%">
-        <span class="text-wrapper">
-          <span class="letters">IIT Mandi</span>
-        </span>
-      </p>
-      <center id="main-page-link">
-      <a href="https://www.facebook.com/artGeeksIITM/"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
-      &nbsp;&nbsp;<a href="https://www.instagram.com/artgeeks_iitmandi/"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
-      &nbsp;&nbsp;<a href="mailto:artgeeks@iitmandi.ac.in"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
-      </center>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
     </div>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
-        <h2 style="text-align:center; margin-top: 20px;font-family: 'Roboto Condensed', sans-serif;">About</h2>
-        <div style="background: rgba(255, 255, 255, 0.4);">
-        <br><br>
-        <center style="opacity: 1;">Art Geeks is the official art club of IIT Mandi. It is the heart of creativity in the college. In a short span, it has successfully established its identity in the college. Each year the club is responsible for new and innovative ways of promoting the art culture in the college.</center>
-        <br><br>
-        </div>
-        </div>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
-        <h2 style="text-align:center;font-family: 'Roboto Condensed', sans-serif;">Events</h2>
-        <div style="background: rgba(255, 255, 255, 0.4);">
-        <h3><center>Vibgyor</center></h3>
-        <hr style="border-width: 5px; border-radius: 3px; width:100px; background-color: blueviolet;">
-        <p>Vibgyor is an annual 3 day long intra college art fest of IIT Mandi exclusively organized by Art Geeks to enable all students, faculty, and staff to showcase their artistic talents. It includes various art-related events :</p>
-        <ul>
-            <li>Canvas</li>
-            <li>Sketching</li>
-            <li>Collage Making</li>
-            <li>Stone Painting</li>
-            <li>Painting</li>
-        </ul>
-            <!-- <p><b>Participate Open for 2018-19</b> : <a href="form/">Click Here</a></p> -->
-        <br><br>
-        <h3><center>Exodia</center></h3>
-        <hr style="border-width: 5px; border-radius: 3px; width:100px; background-color: blueviolet">
-        <p>Exodia is the annual cultural and technical fest of IIT Mandi. It have the events organised by all the technical and cultural society of IIT Mandi</p>
-        <p>ArtGeeks has an important contribution in Exodia trough the designing of various stuffs around the campus including 3D models,Photo Booth, Wall Painting.... </p>
-        <p>It organises a number of events like: </p>
-        <ul>
-            <li>Canvas Making</li>
-            <li>Doodle Making</li>
-            <li>Face Painting</li>
-            <li>Live Sketching</li>
-        </ul>
-        <br>    
-        </div>
-        </div>                                                                                                                                                 
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
-        <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Activities</h2>
-        <br>
-        <div>
-        <br><br>
-        <div class="row justify-content-center">
+  </nav>
+  <div
+    style="min-height: 800px; background-color:burlywood; background-image:url(img/5c9e595493760.jpg); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
+    <h1 class="ml5">
+      <span class="text-wrapper">
+        <span class="line line1"></span>
+        <span class="letters letters-left">Art</span>
+        <span class="letters letters-right">Geeks</span>
+        <span class="line line2"></span>
+      </span>
+    </h1>
+    <p class="ml10" style="margin-left:10%">
+      <span class="text-wrapper">
+        <span class="letters">IIT Mandi</span>
+      </span>
+    </p>
+    <center id="main-page-link">
+      <a href="https://www.facebook.com/artGeeksIITM/"><i class="fab fa-facebook-f"
+          style="font-size:30px; color:black"></i></a>
+      &nbsp;&nbsp;<a href="https://www.instagram.com/artgeeks_iitmandi/"><i class="fab fa-instagram"
+          style="font-size:30px; color: black"></i></a>
+      &nbsp;&nbsp;<a href="mailto:artgeeks@iitmandi.ac.in"><i class="fas fa-envelope"
+          style="font-size:30px; color: black"></i></a>
+    </center>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  </div>
+  <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
+    <h2 style="text-align:center; margin-top: 20px;font-family: 'Roboto Condensed', sans-serif;">About</h2>
+    <div style="background: rgba(255, 255, 255, 0.4);">
+      <br><br>
+      <center style="opacity: 1;">Art Geeks is the official art club of IIT Mandi. It is the heart of creativity in the
+        college. In a short span, it has successfully established its identity in the college. Each year the club is
+        responsible for new and innovative ways of promoting the art culture in the college.</center>
+      <br><br>
+    </div>
+  </div>
+  <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
+    <h2 style="text-align:center;font-family: 'Roboto Condensed', sans-serif;">Events</h2>
+    <div style="background: rgba(255, 255, 255, 0.4);">
+      <h3>
+        <center>Vibgyor</center>
+      </h3>
+      <hr style="border-width: 5px; border-radius: 3px; width:100px; background-color: blueviolet;">
+      <p>Vibgyor is an annual 3 day long intra college art fest of IIT Mandi exclusively organized by Art Geeks to
+        enable all students, faculty, and staff to showcase their artistic talents. It includes various art-related
+        events :</p>
+      <ul>
+        <li>Canvas</li>
+        <li>Sketching</li>
+        <li>Collage Making</li>
+        <li>Stone Painting</li>
+        <li>Painting</li>
+      </ul>
+      
+      <br><br>
+      <h3>
+        <center>Exodia</center>
+      </h3>
+      <hr style="border-width: 5px; border-radius: 3px; width:100px; background-color: blueviolet">
+      <p>Exodia is the annual cultural and technical fest of IIT Mandi. It have the events organised by all the
+        technical and cultural society of IIT Mandi</p>
+      <p>ArtGeeks has an important contribution in Exodia trough the designing of various stuffs around the campus
+        including 3D models,Photo Booth, Wall Painting.... </p>
+      <p>It organises a number of events like: </p>
+      <ul>
+        <li>Canvas Making</li>
+        <li>Doodle Making</li>
+        <li>Face Painting</li>
+        <li>Live Sketching</li>
+      </ul>
+      <br>
+    </div>
+  </div>
+  <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 not-front" style="margin-top: 100px;">
+    <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Activities</h2>
+    <br>
+    <div>
+      <br><br>
+      <div class="row justify-content-center">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9" data-aos="zoom-in">
-        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FslytherinPrncss%2Fvideos%2F507786869681531%2F&width=500&show_text=false&height=280&appId&autoplay=false&loop=true" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FslytherinPrncss%2Fvideos%2F507786869681531%2F&width=500&show_text=false&height=280&appId&autoplay=false&loop=true"
+            width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9" data-aos="zoom-in">
-        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FartGeeksIITM%2Fvideos%2F923482341166013%2F&width=500&show_text=false&height=280&appId&autoplay=false&loop=true" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FartGeeksIITM%2Fvideos%2F923482341166013%2F&width=500&show_text=false&height=280&appId&autoplay=false&loop=true"
+            width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
         </div>
-        </div>
-        <div class="row justify-content-center">
+      </div>
+      <div class="row justify-content-center">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9" data-aos="zoom-in">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ogsZuoDVgdM?rel=0&autoplay=0&mute=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/ogsZuoDVgdM?rel=0&autoplay=0&mute=1&loop=1" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        </div>
-        <br><br>
-        </div>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
-        <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Member's Zone</h2>
-        <br>
-        <div>
+      </div>
+      <br><br>
+    </div>
+    <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
+      <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Member's Zone</h2>
+      <br>
+      <div>
         <div class="row">
-        <div class="col-md-6 col-sm-12">
-            <p style="text-align: left; font-size: 15px;"><img src="members/nisha@2015.jpg" style="width: 40px;height: 40px;">&nbsp;Nisha Shivankar Kumari</p> 
-        </div>
-        <div style="text-align: right;" class="col-md-6 col-sm-12">
-            <a href="https://www.facebook.com/slytherinPrncss/"><img src="connect/fb-2.svg" style="width: 30px;height: 30px">
+          <div class="col-md-6 col-sm-12">
+            <p style="text-align: left; font-size: 15px;"><img src="members/nisha@2015.jpg"
+                style="width: 40px;height: 40px;">&nbsp;Nisha Shivankar Kumari</p>
+          </div>
+          <div style="text-align: right;" class="col-md-6 col-sm-12">
+            <a href="https://www.facebook.com/slytherinPrncss/"><img src="connect/fb-2.svg"
+                style="width: 30px;height: 30px">
             </a>&nbsp;&nbsp;
-            <a href="https://www.youtube.com/channel/UCP9NeIkgNHRTdL6NKKzJMAg/"><img src="connect/youtube.png" style="width: 30px;height: 30px">
-            </a>   
-        </div> 
+            <a href="https://www.youtube.com/channel/UCP9NeIkgNHRTdL6NKKzJMAg/"><img src="connect/youtube.png"
+                style="width: 30px;height: 30px">
+            </a>
+          </div>
         </div>
         <br><br>
         <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9" data-aos="zoom-out">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLGtWlmsHsFcDj1qbRNDVDcge8NZOof4_Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9" data-aos="zoom-out">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLGtWlmsHsFcB_hjr2yP94lhu3h91jJRS6" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9"
+            data-aos="zoom-out">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/videoseries?list=PLGtWlmsHsFcDj1qbRNDVDcge8NZOof4_Y" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9"
+            data-aos="zoom-out">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/videoseries?list=PLGtWlmsHsFcB_hjr2yP94lhu3h91jJRS6" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
         </div>
         <br><br>
+      </div>
+    </div>
+    <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
+      <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Past Events</h2>
+      <br>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/fresh-18.png" style="width: 100%; height:300px;">
         </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/ex-18-1.jpg" style="width: 100%; height:300px;">
         </div>
-        <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px;">
-        <h2 style="text-align:center; margin-top: 40px;font-family: 'Roboto Condensed', sans-serif;">Past Events</h2>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/ex-18-2.jpg" style="width: 100%; height:300px;">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/vib-17-1.jpg" style="width: 100%; height:300px;">
+        </div>
+      </div>
+      <br>
+      <div class="collapse row" id="more_event">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/vib-17-2.jpg" style="width: 100%; height:300px;">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/vib-17-3.jpg" style="width: 100%; height:300px;">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/vib-17-4.jpg" style="width: 100%; height:300px;">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
+          <img src="act-posters/vib-17-5.jpg" style="width: 100%; height:300px;">
+        </div>
         <br>
-        <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/fresh-18.png" style="width: 100%; height:300px;">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/ex-18-1.jpg" style="width: 100%; height:300px;">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/ex-18-2.jpg" style="width: 100%; height:300px;">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/vib-17-1.jpg" style="width: 100%; height:300px;">
-            </div>
-        </div>
-        <br>
-        <div class="collapse row" id="more_event">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/vib-17-2.jpg" style="width: 100%; height:300px;">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/vib-17-3.jpg" style="width: 100%; height:300px;">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/vib-17-4.jpg" style="width: 100%; height:300px;">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-aos="fade-up">
-        <img src="act-posters/vib-17-5.jpg" style="width: 100%; height:300px;">
-            </div>
-        <br>
-        </div>
-        <p>
-            <center>
-                <button onclick="myFunction()" id = "more_less" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#more_event" aria-expanded="false" aria-controls="more_event">
-                More
-                </button>
-            </center>
-        </p>
-        <script>
+      </div>
+      <p>
+        <center>
+          <button onclick="myFunction()" id="more_less" class="btn btn-primary" type="button" data-toggle="collapse"
+            data-target="#more_event" aria-expanded="false" aria-controls="more_event">
+            More
+          </button>
+        </center>
+      </p>
+
+      <script>
         function myFunction() {
           var more = document.getElementById("more_less");
 
@@ -440,160 +530,186 @@
             more.innerHTML = "Less";
           }
         }
-        </script>
-        </div>   
-        <br>
-        <br>
-        </div>
-        <div class="container-fluid bg-dark not-front" style="color: aliceblue; margin-top:4rem; padding-top: 60px;padding-bottom: 20px">
-            <div class="row">
-            <div id = "bottom1" class="col-sm-12 col-md-4" >
-            <p>Important Links</p>
-                <ul>
-                    <li><a href = "https://www.facebook.com/artGeeksIITM/" target="_blank">Facebook Page</a></li>
-                <li>Youtube Channels</li>
-                <ul>
-                    <li class="2">Official Channel  <b style = "color:blue">Comming soon....</b></li>
-                    <li class="2"><a href = "https://www.youtube.com/channel/UCP9NeIkgNHRTdL6NKKzJMAg" target="_blank">Nisha Shivakar Kumari</a></li>
-                </ul>
-                <li><a href = "http://iitmandi.ac.in/" target="_blank">IIT Mandi</a></li>
-                </ul>
+      </script>
+
+      
+    </div>
+    <br>
+    <br>
+  </div>
+  <div class="container-fluid bg-dark not-front"
+    style="color: aliceblue; margin-top:4rem; padding-top: 60px;padding-bottom: 20px">
+    <div class="row">
+      <div id="bottom1" class="col-sm-12 col-md-4">
+        <p>Important Links</p>
+        <ul>
+          <li><a href="https://www.facebook.com/artGeeksIITM/" target="_blank">Facebook Page</a></li>
+          <li>Youtube Channels</li>
+          <ul>
+            <li class="2">Official Channel <b style="color:blue">Comming soon....</b></li>
+            <li class="2"><a href="https://www.youtube.com/channel/UCP9NeIkgNHRTdL6NKKzJMAg" target="_blank">Nisha
+                Shivakar Kumari</a></li>
+          </ul>
+          <li><a href="http://iitmandi.ac.in/" target="_blank">IIT Mandi</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-6" style="text-align: center">
+        <ul type="none">
+          <p><b>Co-Ordinators</b></p>
+          <div class="row">
+            <div class="col-md-4">
             </div>
-            <div class="col-sm-12 col-md-6" style="text-align: center">
-            <ul type = "none">
-              <p><b>Co-Ordinators</b></p>
-                <div class="row">
-                    <div class="col-md-4">
-                    </div>
-                    <div class="col-sm-6 col-xs-6 col-md-4" style="text-align: right">
-                        <li>
-                        <center>
-                        <img src = "members/deepti@2018.jpg" height=100px width=100px/>
-                        <p style="font-family: 'Grenze', serif;">Deepti Singh</p>
-                        </center>                        
-                        </li>
-                     </div>
-                    <div class="col-sm-6 col-xs-6 col-md-4" style="text-align: left">
-                        <center>
-                        <li>
-                        <img src = "members/chaudhary@2018.jpg" height=100px width=100px/>
-                        <p style="font-family: 'Grenze', serif;">Yash Chaudhary</p>
-                        </li>
-                        </center>
-                    </div>
-                </div>
-            </ul>
+            <div class="col-sm-6 col-xs-6 col-md-4" style="text-align: right">
+              <li>
+                <center>
+                  <img src="members/deepti@2018.jpg" height=100px width=100px />
+                  <p style="font-family: 'Grenze', serif;">Deepti Singh</p>
+                </center>
+              </li>
             </div>
-            <br/>
-        </div>
-        </div>
-        <br>
-        <div class="not-front container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <script>
-            // Wrap every letter in a span
-            $('.ml10 .letters').each(function(){
-              $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-            });
+            <div class="col-sm-6 col-xs-6 col-md-4" style="text-align: left">
+              <center>
+                <li>
+                  <img src="members/chaudhary@2018.jpg" height=100px width=100px />
+                  <p style="font-family: 'Grenze', serif;">Yash Chaudhary</p>
+                </li>
+              </center>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <br />
+    </div>
+  </div>
+  <br>
 
-            anime.timeline({loop: true})
-              .add({
-                targets: '.ml10 .letter',
-                rotateY: [-90, 0],
-                duration: 900,
-                delay: function(el, i) {
-                  return 45 * i;
-                }
-              }).add({
-                targets: '.ml10',
-                opacity: 0,
-                duration: 1200,
-                easing: "easeOutExpo",
-                delay: 900
-              });
+  <div class="not-front container-fluid col-12" style="text-align :center">
+    <p id="bottom2"> &copy; IIT MANDI ARTGEEKS</p>
+  </div>
 
 
-              anime.timeline({loop: true})
-              .add({
-                targets: '.ml5 .line',
-                opacity: [0.5,1],
-                scaleX: [0, 1],
-                easing: "easeInOutExpo",
-                duration: 700
-              }).add({
-                targets: '.ml5 .line',
-                duration: 600,
-                easing: "easeOutExpo",
-                translateY: function(e, i, l) {
-                  var offset = -0.625 + 0.625*2*i;
-                  return offset + "em";
-                }
-              }).add({
-                targets: '.ml5 .ampersand',
-                opacity: [0,1],
-                scaleY: [0.5, 1],
-                easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=600'
-              }).add({
-                targets: '.ml5 .letters-left',
-                opacity: [0,1],
-                translateX: ["0.5em", 0],
-                easing: "easeOutExpo",
-                duration: 500,
-                offset: '-=300'
-              }).add({
-                targets: '.ml5 .letters-right',
-                opacity: [0,1],
-                translateX: ["-0.5em", 0],
-                easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=600'
-              }).add({
-                targets: '.ml5',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 800
-              });
-        </script>
-        <script>
-          // When the user scrolls down 20px from the top of the document, show the button
-          window.onscroll = function() {scrollFunction(); scrollFunction2()};
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-          function scrollFunction() {
-            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-              document.getElementById("mySidenav").style.display = "block";
-            } else {
-              document.getElementById("mySidenav").style.display = "none";
-            }
-          }
-          function scrollFunction2() {
-              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-              } else {
-                document.getElementById("myBtn").style.display = "none";
-              }
-            }
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-              document.body.scrollTop = 0;
-              document.documentElement.scrollTop = 0;
-            }
-        </script>
-        <script>
-        $(function(){
-            setTimeout(function(){
-                $('#loader').fadeOut('slow',function(){
-                    $(this).remove();
-                    $('#main-body').css('display','block');
-                });
-            },2000);
+  <script>
+    // Wrap every letter in a span
+    $('.ml10 .letters').each(function () {
+      $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline({
+        loop: true
+      })
+      .add({
+        targets: '.ml10 .letter',
+        rotateY: [-90, 0],
+        duration: 900,
+        delay: function (el, i) {
+          return 45 * i;
+        }
+      }).add({
+        targets: '.ml10',
+        opacity: 0,
+        duration: 1200,
+        easing: "easeOutExpo",
+        delay: 900
+      });
+
+
+    anime.timeline({
+        loop: true
+      })
+      .add({
+        targets: '.ml5 .line',
+        opacity: [0.5, 1],
+        scaleX: [0, 1],
+        easing: "easeInOutExpo",
+        duration: 700
+      }).add({
+        targets: '.ml5 .line',
+        duration: 600,
+        easing: "easeOutExpo",
+        translateY: function (e, i, l) {
+          var offset = -0.625 + 0.625 * 2 * i;
+          return offset + "em";
+        }
+      }).add({
+        targets: '.ml5 .ampersand',
+        opacity: [0, 1],
+        scaleY: [0.5, 1],
+        easing: "easeOutExpo",
+        duration: 600,
+        offset: '-=600'
+      }).add({
+        targets: '.ml5 .letters-left',
+        opacity: [0, 1],
+        translateX: ["0.5em", 0],
+        easing: "easeOutExpo",
+        duration: 500,
+        offset: '-=300'
+      }).add({
+        targets: '.ml5 .letters-right',
+        opacity: [0, 1],
+        translateX: ["-0.5em", 0],
+        easing: "easeOutExpo",
+        duration: 600,
+        offset: '-=600'
+      }).add({
+        targets: '.ml5',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 800
+      });
+  </script>
+
+
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+      scrollFunction2()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        document.getElementById("mySidenav").style.display = "block";
+      } else {
+        document.getElementById("mySidenav").style.display = "none";
+      }
+    }
+
+    function scrollFunction2() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+  <script>
+    $(function () {
+      setTimeout(function () {
+        $('#loader').fadeOut('slow', function () {
+          $(this).remove();
+          $('#main-body').css('display', 'block');
         });
-        </script>
-    </body>
+      }, 2000);
+    });
+  </script>
+
+
+</body>
+
 </html>

@@ -1,40 +1,52 @@
+<!DOCTYPE html>
+
 <html>
-    <head>
-        <title>Art Geeks|Members</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"> 
-        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-        <style>
-            @media only screen and (min-width: 768px){
-            body{
+
+<head>
+    <title>Art Geeks|Members</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <style>
+        @media only screen and (min-width: 768px) {
+            body {
                 background-color: burlywood;
                 min-height: 100%;
                 min-width: 100%;
-                }
             }
-            @media only screen and (max-width: 768px){
-                body{
-                    background-color: burlywood;
-                }
-            .bg-text{
-                    font-size: 10px;
-                }
-            .member_sub{
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                background-color: burlywood;
+            }
+
+            .bg-text {
+                font-size: 10px;
+            }
+
+            .member_sub {
                 font-size: 5px;
             }
-            }
-            /* Position text in the middle of the page/image */
-            .bg-text {
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/opacity/see-through */
             color: white;
             font-weight: bold;
             border: 3px solid #f1f1f1;
@@ -46,383 +58,449 @@
             width: 80%;
             /* padding: 5px; */
             text-align: center;
-            }
-            #member_head{
-                font-weight: 400;
-                font-size: 4em;
-                font-family: 'Cabin', sans-serif;
-                text-decoration-line: underline;
-            }
-            #member_sub{
-                font-size: 1.5em;
-            }
-        </style>
-        <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet"> 
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     </head>
-    <body>
+        }
+
+        #member_head {
+            font-weight: 400;
+            font-size: 4em;
+            font-family: 'Cabin', sans-serif;
+            text-decoration-line: underline;
+        }
+
+        #member_sub {
+            font-size: 1.5em;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
     <div id="mySidenav" class="sidenav">
-        <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class='fab fa-facebook-f' style="font-size:30px; color:black"></i></a>
-        <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class='fab fa-instagram' style="font-size:30px; color: black"></i></a>
-        <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class='fas fa-envelope' style="font-size:30px; color: black"></i></a>
+        <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class="fab fa-facebook-f"
+                style="font-size:30px; color:black"></i></a>
+        <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class="fab fa-instagram"
+                style="font-size:30px; color: black"></i></a>
+        <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class="fas fa-envelope"
+                style="font-size:30px; color: black"></i></a>
         <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
     </div>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-            </li>
-        <li class="nav-item">
-            <a class="nav-link" href="members.html">Member</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-        </li> 
-        <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-        </li> 
-        </ul>
-    </div>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="members.html">Member</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <div style="z-index: 2;background-image: url(img/tram.jpg); filter: blur(3px); -webkit-filter: blur(3px); min-height: 750px; background-color:burlywood; background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <div
+        style="z-index: 2;background-image: url(img/tram.jpg); filter: blur(3px); -webkit-filter: blur(3px); min-height: 750px; background-color:burlywood; background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: center;">
     </div>
     <div class="bg-text">
         <p id="member_head">Members</p>
         <p id="member_sub">ArtGeeks - <i style="font-family: 'Yatra One', cursive;">एक परिवार है</i></p>
     </div>
     <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down" >@2011</b></center>
-    </div>
-    <div class="row">
-            <div class="col-12">
+        <div class="container-fluid col-12">
             <center>
-                <img src="members/priya@2011.jpg"  data-aos="fade-up" class="rounded-circle" alt="priya@2011" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Priya Agarwal</p>
+                <p class="year-num" data-aos="fade-down">@2011</p>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <center>
+        <img src="members/priya@2011.jpg" data-aos="fade-up" class="rounded-circle" alt="priya@2011" height=250px width=250px>
+        
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Priya Agarwal</p>
                 </center>
             </div>
-    </div>
-    <br><br><br>
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down" >@2012</p></center>
-    </div>
-    <div class="row">
+        </div>
+        <br><br><br>
+        <div class="container-fluid col-12">
+            <center>
+                <p class="year-num" data-aos="fade-down">@2012</p>
+            </center>
+        </div>
+        <div class="row">
             <div class="col-md-6 col-lg-6 col-sm-6">
-            <center>
-                <img src="members/aman@2012.jpg" class="rounded-circle" data-aos="fade-up" alt="aman@2012" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Aman Grover</p>
-            </center>
+                <center>
+                    <img src="members/aman@2012.jpg" class="rounded-circle" data-aos="fade-up" alt="aman@2012"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Aman Grover</p>
+                </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6">
-            <center>
-                <img src="members/rahul@2012.jpg" class="rounded-circle" data-aos="fade-up" alt="rahul@2012" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Rahul Bhujade</p>
-            </center>
+                <center>
+                    <img src="members/rahul@2012.jpg" class="rounded-circle" data-aos="fade-up" alt="rahul@2012"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Rahul Bhujade</p>
+                </center>
             </div>
-    </div>
-    <br><br><br>
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down">@2013</p></center>
-    </div>
-    <div class="row">
-            <div class="col-md-4 col-lg-4 col-sm-6">
+        </div>
+        <br><br><br>
+        <div class="container-fluid col-12">
             <center>
-                <img src="members/chandan@2013.jpg" class="rounded-circle" data-aos="fade-up" alt="chandan@2013" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Chandan Purbia</p>
+                <p class="year-num" data-aos="fade-down">@2013</p>
             </center>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/chandan@2013.jpg" class="rounded-circle" data-aos="fade-up" alt="chandan@2013"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Chandan Purbia</p>
+                </center>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/amar@2013.jpg" class="rounded-circle" data-aos="fade-up" alt="amar@2013" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Amar Simha Yadav</p>
-            </center>
+                <center>
+                    <img src="members/amar@2013.jpg" class="rounded-circle" data-aos="fade-up" alt="amar@2013"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Amar Simha Yadav</p>
+                </center>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12">
-            <center>
-                <img src="members/samridhi@2013.jpg" class="rounded-circle" data-aos="fade-up" alt="samridhi@2013" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Samridhi Jain</p>
-            </center>
+                <center>
+                    <img src="members/samridhi@2013.jpg" class="rounded-circle" data-aos="fade-up" alt="samridhi@2013"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Samridhi Jain</p>
+                </center>
             </div>
-    </div>
-    <br><br><br>
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down">@2014</p></center>
-    </div>
-    <div class="row">
+        </div>
+        <br><br><br>
+        <div class="container-fluid col-12">
+            <center>
+                <p class="year-num" data-aos="fade-down">@2014</p>
+            </center>
+        </div>
+        <div class="row">
             <div class="col-12">
-            <center>
-                <img src="members/neha@2014.jpg" class="rounded-circle" data-aos="fade-up" alt="neha@2014" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Neha Grewal</p>
+                <center>
+                    <img src="members/neha@2014.jpg" class="rounded-circle" data-aos="fade-up" alt="neha@2014"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Neha Grewal</p>
                 </center>
             </div>
-    </div>
-    <br><br><br>
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down">@2015</p></center>
-    </div>
-    <div class="row">
-            <div class="col-md-4 col-lg-4 col-sm-6">
+        </div>
+        <br><br><br>
+        <div class="container-fluid col-12">
             <center>
-                <img src="members/abhijeet@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="abhijeet@2015" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Abhijeet Sharma</p>
+                <p class="year-num" data-aos="fade-down">@2015</p>
             </center>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/abhijeet@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="abhijeet@2015"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Abhijeet Sharma</p>
+                </center>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/nisha@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="nisha@2015" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Nisha Kumari</p>
-            </center>
+                <center>
+                    <img src="members/nisha@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="nisha@2015"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Nisha Kumari</p>
+                </center>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/indresh@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="indresh@2015" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Indresh Kumar</p>
-            </center>
+                <center>
+                    <img src="members/indresh@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="indresh@2015"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Indresh Kumar</p>
+                </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6">
-            <center>
-                <img src="members/mohit@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="mohit@2015" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Mohit Sharma</p>
-            </center>
+                <center>
+                    <img src="members/mohit@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="mohit@2015"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Mohit Sharma</p>
+                </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-12">
-            <center>
-                <img src="members/pranav@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="pranav@2015" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Pranav Gupta</p>
-            </center>
-            </div>
-    </div>
-    <br><br><br>
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down">@2016</p></center>
-    </div>
-    <div class="row">
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/chirag@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="chirag@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Chirag Vashisht</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/shishir@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="shishir@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Shishir Asthana</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/parimal@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="parimal@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Parimal Kumar</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/shreyas@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="shreyas@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Shreyas Bapat</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/rajan@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="rajan@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Rajan Bajaj</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/vishnu@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="vishnu@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Vishnu Priya Jindal</p>
-            </center>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-6">
-            <center>
-                <img src="members/neeraj@2016.png" class="rounded-circle" data-aos="fade-up" alt="neeraj@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Neeraj Yadav</p>
+                <center>
+                    <img src="members/pranav@2015.jpg" class="rounded-circle" data-aos="fade-up" alt="pranav@2015"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Pranav Gupta</p>
                 </center>
             </div>
-            <div class="col-md-6 col-lg-6 col-sm-6">
+        </div>
+        <br><br><br>
+        <div class="container-fluid col-12">
             <center>
-                <img src="members/nidhika@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="nidhika@2016" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Nidhika Kadela</p>
-                </center>
-            </div>
-    </div>
-    <br><br><br>
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down">@2017</p></center>
-    </div>
-    <div class="row">
+                <p class="year-num" data-aos="fade-down">@2016</p>
+            </center>
+        </div>
+        <div class="row">
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/mayank@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="mayank@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Mayank Agarwal</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/NA.jpg" class="rounded-circle" data-aos="fade-up" alt="shikhar@2017" title="Image not shown due to the lack of permission from the subject" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Shikhar Kumar</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/vaishali@2017.png" class="rounded-circle" data-aos="fade-up" alt="vaishali@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Vaishali Gojra</p>
-            </center>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-6">
-            <center>
-                <img src="members/roshan_sh@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="roshan_sh@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Roshan Sharma</p>
-            </center>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-6">
-            <center>
-                <img src="members/sanjeev@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="sanjeev@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Sanjeev Singh Yadav</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/saransh@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="saransh@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Saransh Sharma</p>
-            </center>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/roshan@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="roshan@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Muhammad Roshan</p>
+                <center>
+                    <img src="members/chirag@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="chirag@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Chirag Vashisht</p>
                 </center>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/anuradha@2017.png" class="rounded-circle" data-aos="fade-up" alt="anuradha@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Anuradha Meena</p>
+                <center>
+                    <img src="members/shishir@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="shishir@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Shishir Asthana</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/parimal@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="parimal@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Parimal Kumar</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/shreyas@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="shreyas@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Shreyas Bapat</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/rajan@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="rajan@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Rajan Bajaj</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/vishnu@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="vishnu@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Vishnu Priya Jindal</p>
                 </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6">
                 <center>
-                <img src="members/kanika@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="kanika@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Kanika Gupta</p>
+                    <img src="members/neeraj@2016.png" class="rounded-circle" data-aos="fade-up" alt="neeraj@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Neeraj Yadav</p>
                 </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6">
                 <center>
-                <img src="members/saurabh@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="saurabh@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Saurabh Singh</p>
+                    <img src="members/nidhika@2016.jpg" class="rounded-circle" data-aos="fade-up" alt="nidhika@2016"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Nidhika Kadela</p>
+                </center>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="container-fluid col-12">
+            <center>
+                <p class="year-num" data-aos="fade-down">@2017</p>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/mayank@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="mayank@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Mayank Agarwal</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/NA.jpg" class="rounded-circle" data-aos="fade-up" alt="shikhar@2017"
+                        title="Image not shown due to the lack of permission from the subject" height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Shikhar Kumar</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/vaishali@2017.png" class="rounded-circle" data-aos="fade-up" alt="vaishali@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Vaishali Gojra</p>
                 </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6">
                 <center>
-                <img src="members/pawan@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="pawan@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Pawan Kumar</p>
+                    <img src="members/roshan_sh@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="roshan_sh@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Roshan Sharma</p>
                 </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6">
                 <center>
-                <img src="members/puru@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="puru@2017" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Purushottam Sinha</p>
+                    <img src="members/sanjeev@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="sanjeev@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Sanjeev Singh Yadav</p>
                 </center>
             </div>
-    </div>
-    <br><br><br>
-    <div class="container-fluid col-12">
-        <center><p class="year-num" data-aos="fade-down">@2018</p></center>
-    </div>
-    <div class="row">
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/deepti@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="deepti@2018" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Deepti Singh</p>
-            </center>
+                <center>
+                    <img src="members/saransh@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="saransh@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Saransh Sharma</p>
+                </center>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/anam@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="anam@2018" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Anam Siddiqui</p>
-            </center>
+                <center>
+                    <img src="members/roshan@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="roshan@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Muhammad Roshan</p>
+                </center>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-6">
-            <center>
-                <img src="members/chaudhary@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="chaudhary@2018" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Yash Chaudhary</p>
-            </center>
+                <center>
+                    <img src="members/anuradha@2017.png" class="rounded-circle" data-aos="fade-up" alt="anuradha@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Anuradha Meena</p>
+                </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6">
+                <center>
+                    <img src="members/kanika@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="kanika@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Kanika Gupta</p>
+                </center>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6">
+                <center>
+                    <img src="members/saurabh@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="saurabh@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Saurabh Singh</p>
+                </center>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6">
+                <center>
+                    <img src="members/pawan@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="pawan@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Pawan Kumar</p>
+                </center>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6">
+                <center>
+                    <img src="members/puru@2017.jpg" class="rounded-circle" data-aos="fade-up" alt="puru@2017"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Purushottam Sinha</p>
+                </center>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="container-fluid col-12">
             <center>
-                <img src="members/bansod@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="bansod@2018" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Yash Bansod</p>
+                <p class="year-num" data-aos="fade-down">@2018</p>
             </center>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/deepti@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="deepti@2018"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Deepti Singh</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/anam@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="anam@2018"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Anam Siddiqui</p>
+                </center>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6">
+                <center>
+                    <img src="members/chaudhary@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="chaudhary@2018"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Yash Chaudhary</p>
+                </center>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6">
+                <center>
+                    <img src="members/bansod@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="bansod@2018"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Yash Bansod</p>
+                </center>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-12">
-            <center>
-                <img src="members/ekansh@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="ekansh@2018" height=250px width=250px> 
-                <br><br>
-                <p class="mem_name" data-aos="fade-up">Ekansh Sharma</p>
-            </center>
+                <center>
+                    <img src="members/ekansh@2018.jpg" class="rounded-circle" data-aos="fade-up" alt="ekansh@2018"
+                        height=250px width=250px>
+                    <br><br>
+                    <p class="mem_name" data-aos="fade-up">Ekansh Sharma</p>
+                </center>
             </div>
-    </div>
-    <br><br>
+        </div>
+        <br><br>
     </div>
     <hr>
     <div class="container">
         <div class="jumbotron">
-            <h4><b><center>Faculty Advisor</center></b></h4>
+            <h4><b>
+                    <center>Faculty Advisor</center>
+                </b></h4>
             <div class="row">
                 <div class="col-12">
                     <center><img src="img/fac/astrid-kiehn.jpg" style="width:200px"></center>
                 </div>
                 <div class="col-12">
-                    <center>Astrid Kiehn<br>School of Computing and Electrical Engineering<br>astrid[at]iitmandi[dot]ac[dot]in</center>
-                </div>                
+                    <center>Astrid Kiehn<br>School of Computing and Electrical
+                        Engineering<br>astrid[at]iitmandi[dot]ac[dot]in</center>
+                </div>
             </div>
         </div>
     </div>
     <hr>
-    <div class="container-fluid col-12" style="text-align :center"><p id = "bottom2">	&copy; IIT MANDI ARTGEEKS</p></div>
+    <div class="container-fluid col-12" style="text-align :center">
+        <p id="bottom2"> &copy; IIT MANDI ARTGEEKS</p>
+    </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    </body>
+</body>
+
 </html>
