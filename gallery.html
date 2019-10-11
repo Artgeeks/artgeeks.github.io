@@ -1,491 +1,487 @@
 <!DOCTYPE html>
 
-
 <html>
 
 <head>
-    <title>Art Geeks|Gallery</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.js"></script>
-    <link rel="stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous">
+  <title>Art Geeks|Gallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
-    <script>
-        $(document).on("click", '[data-toggle="lightbox"]',
-            function (event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-    </script>
+  <script>
+    $(document).on("click", '[data-toggle="lightbox"]',
+      function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+  </script>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Germania+One|Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Eczar|Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Germania+One|Oswald" rel="stylesheet">
 
-    <style>
-        @media only screen and (min-width: 768px) {
-            body {
-                background-color: burlywood;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-               -o-background-size: cover;
-                 background-attachment: fixed;
-                 background-repeat: no-repeat;
-                background-size: cover;
-                 background-position:center;
-                min-height: 100%;
-                min-width: 100%;
-            }
-        }
+  <style>
+    @media only screen and (min-width: 768px) {
+      body {
+        background-color: burlywood;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100%;
+        min-width: 100%;
+      }
+    }
 
-        @media only screen and (max-width: 768px) {
-            body {
-                background-color: burlywood;
-            }
-        }
+    @media only screen and (max-width: 768px) {
+      body {
+        background-color: burlywood;
+      }
+    }
 
-        @media only screen and (min-width: 768px) {
-            .ml6 {
-                position: relative;
-                font-weight: 900;
-                font-size: 5em;
-                float: right;
-                margin-top: 20%;
-                margin-right: 20%;
-            }
-        }
+    @media only screen and (min-width: 768px) {
+      .ml6 {
+        position: relative;
+        font-weight: 900;
+        font-size: 5em;
+        float: right;
+        margin-top: 20%;
+        margin-right: 20%;
+      }
+    }
 
-        @media only screen and (max-width: 420px) {
-            .ml6 {
-                position: relative;
-                font-weight: 900;
-                font-size: 4em;
-                float: right;
-                margin-top: 50%;
-                margin-right: 10%;
-            }
-        }
+    @media only screen and (max-width: 420px) {
+      .ml6 {
+        position: relative;
+        font-weight: 900;
+        font-size: 4em;
+        float: right;
+        margin-top: 50%;
+        margin-right: 10%;
+      }
+    }
 
-        @media only screen and (max-width: 768px) {
-            .ml6 {
-                position: relative;
-                font-weight: 900;
-                font-size: 4em;
-                float: right;
-                margin-top: 40%;
-                margin-right: 10%;
-            }
-        }
+    @media only screen and (max-width: 768px) {
+      .ml6 {
+        position: relative;
+        font-weight: 900;
+        font-size: 4em;
+        float: right;
+        margin-top: 40%;
+        margin-right: 10%;
+      }
+    }
 
-        .ml6 .text-wrapper {
-            position: relative;
-            display: inline-block;
-            padding-top: 0.2em;
-            padding-right: 0.05em;
-            padding-bottom: 0.1em;
-            overflow: hidden;
-        }
+    .ml6 .text-wrapper {
+      position: relative;
+      display: inline-block;
+      padding-top: 0.2em;
+      padding-right: 0.05em;
+      padding-bottom: 0.1em;
+      overflow: hidden;
+    }
 
-        .ml6 .letter {
-            display: inline-block;
-            line-height: 1em;
-        }
+    .ml6 .letter {
+      display: inline-block;
+      line-height: 1em;
+    }
 
-        .portrait-img {
-            height: 350px;
-        }
+    .portrait-img {
+      height: 350px;
+    }
 
-        .landscape-img {
-            height: 200px;
-        }
+    .landscape-img {
+      height: 200px;
+    }
 
-        h2 {
-            font-family: 'Germania One', cursive;
-        }
+    h2 {
+      font-family: 'Germania One', cursive;
+    }
 
-        h4 {
-            font-family: 'Oswald', sans-serif;
-        }
-    </style>
+    h4 {
+      font-family: 'Oswald', sans-serif;
+    }
+  </style>
 
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="members.html">Member</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gallery.html">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div
-        style="background-image: url(img/5c9d93c75da37.jpg); min-height: 800px; background-color:burlywood; background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
-        <h1 class="ml6">
-            <span class="text-wrapper">
-                <span class="letters">Gallery</span>
-            </span>
-        </h1>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="members.html">Member</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
     </div>
-    <div class="fixed-bg"></div>
-    <div id="mySidenav" class="sidenav" style="display:none">
-        <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class="fab fa-facebook-f"
-                style="font-size:30px; color:black"></i></a>
-        <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class="fab fa-instagram"
-                style="font-size:30px; color: black"></i></a>
-        <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class="fas fa-envelope"
-                style="font-size:30px; color: black"></i></a>
-        <a href="contact.html" id="contact"><img src="connect/show.svg" style="height: 40px; width: 40px"></a>
+  </nav>
+  <div
+    style="background-image: url(img/5c9d93c75da37.jpg); min-height: 800px; background-color:burlywood; background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: top;">
+    <h1 class="ml6">
+      <span class="text-wrapper">
+        <span class="letters">Gallery</span>
+      </span>
+    </h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  </div>
+  <div class="fixed-bg"></div>
+  
+  <div id="mySidenav" class="sidenav" style="display:none">
+    <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class="fas fa-envelope"></i></a>
+    <a href="contact.html" id="contact"><i class="fas fa-chevron-right"></i></a>
+  </div>
+  
+  <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
+    <div class="container">
+      <hr><br>
+      <h2 style="text-align: center">Hall of Fame</h2>
+      <br>
+      <hr>
+      <h4>Portrait</h4>
+      <br>
+      <div class="row portrait">
+        <a data-aos="zoom-in-up" href="collection/hall/1.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Eagle's Eye</b>"
+          data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/1.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>The Eagle's Eye</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/10.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Sunset Lovers</b>"
+          data-footer="<i>Created by - Muhammed Roshan <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/10.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Sunset Lovers</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/11.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>I am the Danger</b>"
+          data-footer="<i>Created by - Shishir Asthana <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/11.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>I am the Danger</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/12.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>I am Batman</b>"
+          data-footer="<i>Created by - Shishir Asthana <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/12.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>I am Batman</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/13.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Hi Georgie</b>"
+          data-footer="<i>Created by - Bhavya Bhatt <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/13.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Hi Georgie</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/14.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Bend it like Beckham</b>"
+          data-footer="<i>Created by - Mayank Agarwal and Akshita Jain <br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/14.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Bend it Like Beckham</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/15.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Moonlight Desire</b>"
+          data-footer="<i>Created by - Sylvia Mittal<br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/15.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Moonlight Desire</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/16.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Acrylic Painting</b>"
+          data-footer="<i>Created by - Chirag Vashist <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/16.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Acrylic Painting</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/17.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Northern Lights</b>"
+          data-footer="<i>Created by - Anuradha Meena <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/17.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Northern Lights</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/18.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Magnificent</b>"
+          data-footer="<i>Created by - Chirag Vashist <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/18.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>The Magnificient</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/19.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Neon Demon</b>"
+          data-footer="<i>Created by - Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/19.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>The Neon Demon</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/20.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Dancing Girl</b>"
+          data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/20.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Dancing Girl</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/21.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Shut Up and Paint</b>"
+          data-footer="<i>Created by - Muhammed Roshan<br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/21.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Shut Up and Paint</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/22.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Girl int Rain</b>"
+          data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/22.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Girl in Rain</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/23.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Someting is Cooking ;)</b>"
+          data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/23.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Someting is Cooking ;)</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/24.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Matchings Beats</b>"
+          data-footer="<i>Created by - Shikhar Kumar <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/24.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Matching Beats</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/25.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Buddha The Enlighted One</b>"
+          data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/25.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Buddha The Enlighted One</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/2.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Neon Demon 2.0</b>"
+          data-footer="<i>Created by -  Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/2.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>The Neon Demon 2.0</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/3.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Light in the Darkness</b>"
+          data-footer="<i>Created by - Mayank Agarwal <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/3.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Light in the Darkness</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/4.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Psychedelic Night</b>"
+          data-footer="<i>Created by - Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/4.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Psychedelic Night</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/5.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>O' thy Sailor</b>"
+          data-footer="<i>Created by - Mayank Agarwal<br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/5.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>O' thy Sailor</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/6.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Ironman</b>"
+          data-footer="<i>Created by - Muhammed Roshan <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/6.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Ironman</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/7.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Why So Serious</b>"
+          data-footer="<i>Created by - Mayank Agarwal <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/7.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Why So Serious</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/8.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Shadow</b>"
+          data-footer="<i>Created by - Shreyas Bapat <br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/8.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>The Shadow</i></div>
+          </div>
+        </a>
+      </div>
+      <br>
+      <hr>
+      <h4>Landscape</h4>
+      <br>
+      <div class="row">
+        <a data-aos="zoom-in-up" href="collection/hall/a.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Illusion</b>"
+          data-footer="<i>Created by - Indresh Sharma <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/a.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Illusion</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/b.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Little Princess</b>"
+          data-footer="<i>Created by - Vaishali Gojra<br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/b.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>Little Princess</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/c.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Lighthouse</b>"
+          data-footer="<i>Created by - Rajan Bajaj<br> Color used - Acrylic <br> Paper-size  - A2</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/c.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Lighthouse</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/d.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>A Winter Night</b>"
+          data-footer="<i>Created by - Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/d.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>A Winter Night</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/e.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Shadow V.2</b>"
+          data-footer="<i>Created by - Shreyas Bapat <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/e.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Shadow V.2</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/hall/f.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Shadow V.3</b>"
+          data-footer="<i>Created by - Shreyas Bapat <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/hall/f.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Shadow V.3</i></div>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12" style="margin-top: 100px">
-        <div class="container">
-            <hr><br>
-            <h2 style="text-align: center">Hall of Fame</h2>
-            <br>
-            <hr>
-            <h4>Portrait</h4>
-            <br>
-            <div class="row portrait">
-                <a data-aos="zoom-in-up" href="collection/hall/1.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Eagle's Eye</b>"
-                    data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/1.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>The Eagle's Eye</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/10.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Sunset Lovers</b>"
-                    data-footer="<i>Created by - Muhammed Roshan <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/10.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Sunset Lovers</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/11.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>I am the Danger</b>"
-                    data-footer="<i>Created by - Shishir Asthana <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/11.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>I am the Danger</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/12.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>I am Batman</b>"
-                    data-footer="<i>Created by - Shishir Asthana <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/12.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>I am Batman</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/13.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Hi Georgie</b>"
-                    data-footer="<i>Created by - Bhavya Bhatt <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/13.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Hi Georgie</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/14.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Bend it like Beckham</b>"
-                    data-footer="<i>Created by - Mayank Agarwal and Akshita Jain <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/14.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Bend it Like Beckham</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/15.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Moonlight Desire</b>"
-                    data-footer="<i>Created by - Sylvia Mittal<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/15.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Moonlight Desire</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/16.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Acrylic Painting</b>"
-                    data-footer="<i>Created by - Chirag Vashist <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/16.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Acrylic Painting</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/17.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Northern Lights</b>"
-                    data-footer="<i>Created by - Anuradha Meena <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/17.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Northern Lights</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/18.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Magnificent</b>"
-                    data-footer="<i>Created by - Chirag Vashist <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/18.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>The Magnificient</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/19.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Neon Demon</b>"
-                    data-footer="<i>Created by - Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/19.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>The Neon Demon</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/20.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Dancing Girl</b>"
-                    data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/20.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Dancing Girl</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/21.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Shut Up and Paint</b>"
-                    data-footer="<i>Created by - Muhammed Roshan<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/21.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Shut Up and Paint</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/22.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Girl int Rain</b>"
-                    data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/22.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Girl in Rain</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/23.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Someting is Cooking ;)</b>"
-                    data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/23.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Someting is Cooking ;)</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/24.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Matchings Beats</b>"
-                    data-footer="<i>Created by - Shikhar Kumar <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/24.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Matching Beats</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/25.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Buddha The Enlighted One</b>"
-                    data-footer="<i>Created by - Shikhar Kumar<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/25.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Buddha The Enlighted One</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/2.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Neon Demon 2.0</b>"
-                    data-footer="<i>Created by -  Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/2.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>The Neon Demon 2.0</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/3.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Light in the Darkness</b>"
-                    data-footer="<i>Created by - Mayank Agarwal <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/3.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Light in the Darkness</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/4.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Psychedelic Night</b>"
-                    data-footer="<i>Created by - Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/4.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Psychedelic Night</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/5.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>O' thy Sailor</b>"
-                    data-footer="<i>Created by - Mayank Agarwal<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/5.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>O' thy Sailor</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/6.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Ironman</b>"
-                    data-footer="<i>Created by - Muhammed Roshan <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/6.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Ironman</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/7.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Why So Serious</b>"
-                    data-footer="<i>Created by - Mayank Agarwal <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/7.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Why So Serious</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/8.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Shadow</b>"
-                    data-footer="<i>Created by - Shreyas Bapat <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/8.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>The Shadow</i></div>
-                    </div>
-                </a>
-            </div>
-            <br>
-            <hr>
-            <h4>Landscape</h4>
-            <br>
-            <div class="row">
-                <a data-aos="zoom-in-up" href="collection/hall/a.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Illusion</b>"
-                    data-footer="<i>Created by - Indresh Sharma <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/a.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Illusion</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/b.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Little Princess</b>"
-                    data-footer="<i>Created by - Vaishali Gojra<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/b.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>Little Princess</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/c.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Lighthouse</b>"
-                    data-footer="<i>Created by - Rajan Bajaj<br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/c.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Lighthouse</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/d.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>A Winter Night</b>"
-                    data-footer="<i>Created by - Vaishali Gojra <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/d.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>A Winter Night</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/e.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Shadow V.2</b>"
-                    data-footer="<i>Created by - Shreyas Bapat <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/e.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Shadow V.2</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/hall/f.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Shadow V.3</b>"
-                    data-footer="<i>Created by - Shreyas Bapat <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/hall/f.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Shadow V.3</i></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <br>
-            <hr><br>
-            <h2 style="text-align: center">Sketch</h2><br>
-            <hr>
-            <br>
-            <h4>Portrait</h4>
-            <div class="row portrait">
-                <!--<a data-aos="zoom-in-up" href="collection/sketch/7.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>All in One</b>" data-footer= "<i>Created by - S. Pawar <br> Color used - Pencil Crayons <br> Paper-size  - A3</i>" class="col-md-3">
+    <div class="container">
+      <br>
+      <hr><br>
+      <h2 style="text-align: center">Sketch</h2><br>
+      <hr>
+      <br>
+      <h4>Portrait</h4>
+      <div class="row portrait">
+        <!--<a data-aos="zoom-in-up" href="collection/sketch/7.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>All in One</b>" data-footer= "<i>Created by - S. Pawar <br> Color used - Pencil Crayons <br> Paper-size  - A3</i>" class="col-md-3">
             <div class="gallery-container">
                 <img src="Thumbnails/sketch/7.jpg" class="img-fluid rounded image portrait-img">
                 <div class="overlay"><i>All in One</i></div>
             </div>
         </a>-->
-                <a data-aos="zoom-in-up" href="collection/sketch/8.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Free Like a Bird</b>"
-                    data-footer="<i>Created by - Akshita Jain <br> Color used - Water Colors <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/8.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Free Like A Bird</i></div>
-                    </div>
-                </a>
-                <!--<a data-aos="zoom-in-up" href="collection/sketch/3.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Beautiful Nature</b>" data-footer= "<i>Created by - VSSR <br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
+        <a data-aos="zoom-in-up" href="collection/sketch/8.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Free Like a Bird</b>"
+          data-footer="<i>Created by - Akshita Jain <br> Color used - Water Colors <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/8.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Free Like A Bird</i></div>
+          </div>
+        </a>
+        <!--<a data-aos="zoom-in-up" href="collection/sketch/3.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Beautiful Nature</b>" data-footer= "<i>Created by - VSSR <br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
             <div class="gallery-container">
                 <img src="Thumbnails/sketch/3.jpg" class="img-fluid rounded image portrait-img">
                 <div class="overlay"><i>The Beautiful Nature</i></div>
             </div>
         </a>-->
-                <a data-aos="zoom-in-up" href="collection/sketch/4.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Dance is Life</b>"
-                    data-footer="<i>Created by - Sai Sandeep <br> Mode used - Pencil <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/4.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Dance is Life</i></div>
-                    </div>
-                </a>
-                <!--<a data-aos="zoom-in-up" href="collection/sketch/5.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Bird Queen</b>" data-footer= "<i>Created by -Ananya Shukla<br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
+        <a data-aos="zoom-in-up" href="collection/sketch/4.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Dance is Life</b>"
+          data-footer="<i>Created by - Sai Sandeep <br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/4.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Dance is Life</i></div>
+          </div>
+        </a>
+        <!--<a data-aos="zoom-in-up" href="collection/sketch/5.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Bird Queen</b>" data-footer= "<i>Created by -Ananya Shukla<br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
             <div class="gallery-container">
                 <img src="Thumbnails/sketch/5.jpg" class="img-fluid rounded image portrait-img">
                 <div class="overlay"><i>The Bird Queen</i></div>
@@ -497,7 +493,7 @@
                 <div class="overlay"><i>The Missing Lady</i></div>
             </div>
         </a>-->
-                <!--<a data-aos="zoom-in-up" href="collection/sketch/10.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>Hello World</b>" data-footer= "<i>Created by - Soul Taker <br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
+        <!--<a data-aos="zoom-in-up" href="collection/sketch/10.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>Hello World</b>" data-footer= "<i>Created by - Soul Taker <br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
             <div class="gallery-container">
                 <img src="Thumbnails/sketch/10.jpg" class="img-fluid rounded image portrait-img">
                 <div class="overlay"><i>Hello World</i></div>
@@ -509,77 +505,74 @@
                 <div class="overlay"><i>The Rose</i></div>
             </div>
         </a>-->
-                <a data-aos="zoom-in-up" href="collection/sketch/13.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Hitler</b>"
-                    data-footer="<i>Created by - Shikhar <br> Mode used - Pencil <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/13.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>The Hitler</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/sketch/14.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Dream Girl</b>"
-                    data-footer="<i>Created by - Ashwariya Bhargav <br> Mode used - Pencil <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/14.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Dream Girl</i></div>
-                    </div>
-                </a>
+        <a data-aos="zoom-in-up" href="collection/sketch/13.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Hitler</b>"
+          data-footer="<i>Created by - Shikhar <br> Mode used - Pencil <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/13.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>The Hitler</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/sketch/14.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Dream Girl</b>"
+          data-footer="<i>Created by - Ashwariya Bhargav <br> Mode used - Pencil <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/14.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Dream Girl</i></div>
+          </div>
+        </a>
 
-            </div>
-            <br>
-            <hr>
-            <h4>Landscape</h4><br>
-            <div class="row">
-                <a data-aos="zoom-in-up" href="collection/sketch/a.png" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Our Respectful Salute to the Nation</b>"
-                    data-footer="<i>Created by - Anonymous <br> color used - Pencil <br> Paper-size  - A4</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/a.png" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>Our Respectful Salute to the Nation</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/sketch/b.png" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Great Tree</b>"
-                    data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A4</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/b.png" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Great Tree</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/sketch/c.png" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Feel The Music</b>"
-                    data-footer="<i>Created by - Shreyas Bapat <br> Mode used - Pencil <br> Paper-size  - A4</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/c.png" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>Feel The Music</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/sketch/d.png" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Girl by the Edge</b>"
-                    data-footer="<i>Created by - Navya Varakantham <br> Mode used - Pencil <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/sketch/d.png" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Girl by the Edge</i></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <br>
-            <hr><br>
-            <h2 style="text-align: center">Calligraphy</h2>
-            <br>
-            <hr><br>
-            <center><i>Nothing to display</i></center><br>
-            <hr>
-            <!--<br><h4>Portrait</h4>
+      </div>
+      <br>
+      <hr>
+      <h4>Landscape</h4><br>
+      <div class="row">
+        <a data-aos="zoom-in-up" href="collection/sketch/a.png" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Our Respectful Salute to the Nation</b>"
+          data-footer="<i>Created by - Anonymous <br> color used - Pencil <br> Paper-size  - A4</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/a.png" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>Our Respectful Salute to the Nation</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/sketch/b.png" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Great Tree</b>"
+          data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A4</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/b.png" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Great Tree</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/sketch/c.png" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Feel The Music</b>"
+          data-footer="<i>Created by - Shreyas Bapat <br> Mode used - Pencil <br> Paper-size  - A4</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/c.png" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>Feel The Music</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/sketch/d.png" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Girl by the Edge</b>"
+          data-footer="<i>Created by - Navya Varakantham <br> Mode used - Pencil <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/sketch/d.png" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Girl by the Edge</i></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <br>
+      <hr><br>
+      <h2 style="text-align: center">Calligraphy</h2>
+      <br>
+      <hr><br>
+      <center><i>Nothing to display</i></center><br>
+      <hr>
+      <!--<br><h4>Portrait</h4>
         <div class="row portrait">
         <a data-aos="zoom-in-up" href="collection/calligraphy/1.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>Calm in Chaos</b>" data-footer= "<i>Created by - Priya Singh <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
             <div class="gallery-container">
@@ -597,373 +590,353 @@
             </div>
         </a>
         </div>-->
-        </div>
-        <div class="container">
-            <br>
-            <hr><br>
-            <h2 style="text-align: center">Beginner's Gallery</h2>
-            <br>
-            <hr><br>
-            <h4>Portrait</h4>
-            <div class="row portrait">
-                <a data-aos="zoom-in-up" href="collection/basic/1.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Shiva - The Destroyer</b>"
-                    data-footer="<i>Created by - Mayank Agarwal <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/1.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Shiva - The Destroyer</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/basic/2.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Effiel Tower</b>"
-                    data-footer="<i>Created by - Anuradha Meena <br> Color used - Acrylic <br> Paper-size  - A2</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/2.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>The Effiel Tower</i></div>
-                    </div>
-                </a>
-                <!--<a data-aos="zoom-in-up" href="collection/basic/3.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Tulips</b>" data-footer= "<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+    </div>
+    <div class="container">
+      <br>
+      <hr><br>
+      <h2 style="text-align: center">Beginner's Gallery</h2>
+      <br>
+      <hr><br>
+      <h4>Portrait</h4>
+      <div class="row portrait">
+        <a data-aos="zoom-in-up" href="collection/basic/1.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Shiva - The Destroyer</b>"
+          data-footer="<i>Created by - Mayank Agarwal <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/1.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Shiva - The Destroyer</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/basic/2.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Effiel Tower</b>"
+          data-footer="<i>Created by - Anuradha Meena <br> Color used - Acrylic <br> Paper-size  - A2</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/2.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>The Effiel Tower</i></div>
+          </div>
+        </a>
+        <!--<a data-aos="zoom-in-up" href="collection/basic/3.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Tulips</b>" data-footer= "<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
             <div class="gallery-container">
                 <img src="Thumbnails/basic/3.jpg" class="img-fluid rounded image portrait-img">
                 <div class="overlay"><i>The Tulips</i></div>
             </div>
         </a>-->
-                <a data-aos="zoom-in-up" href="collection/basic/4.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Together Stronger - 1</b>"
-                    data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/4.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Together Stronger - 1</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/basic/5.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Together Stronger - 2</b>"
-                    data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/5.jpg" class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Together Stronger - 2</i></div>
-                    </div>
-                </a>
-            </div>
-            <br>
-            <hr>
-            <h4>Landscape</h4>
-            <div class="row">
-                <a data-aos="zoom-in-up" href="collection/basic/a.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Tiger</b>"
-                    data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/a.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Tiger</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/basic/b.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>City Light</b>"
-                    data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/b.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>City Light</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/basic/c.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Dragon Ball Z</b>"
-                    data-footer="<i>Created by - Nabeel Khan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/c.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>Dragon Ball Z</i></div>
-                    </div>
-                </a>
-                <!--<a data-aos="zoom-in-up" href="collection/basic/d.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Kitten</b>" data-footer= "<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+        <a data-aos="zoom-in-up" href="collection/basic/4.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Together Stronger - 1</b>"
+          data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/4.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Together Stronger - 1</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/basic/5.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Together Stronger - 2</b>"
+          data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/5.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Together Stronger - 2</i></div>
+          </div>
+        </a>
+      </div>
+      <br>
+      <hr>
+      <h4>Landscape</h4>
+      <div class="row">
+        <a data-aos="zoom-in-up" href="collection/basic/a.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Tiger</b>"
+          data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/a.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Tiger</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/basic/b.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>City Light</b>"
+          data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/b.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>City Light</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/basic/c.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Dragon Ball Z</b>"
+          data-footer="<i>Created by - Nabeel Khan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/c.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>Dragon Ball Z</i></div>
+          </div>
+        </a>
+        <!--<a data-aos="zoom-in-up" href="collection/basic/d.JPG" data-toggle="lightbox" data-gallery="gallery" data-title="<b>The Kitten</b>" data-footer= "<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
             <div class="gallery-container">
                 <img src="Thumbnails/basic/d.jpg" class="img-fluid rounded image landscape-img">
                 <div class="overlay"><i>The Kitten</i></div>
             </div>
         </a>-->
-                <a data-aos="zoom-in-up" href="collection/basic/e.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Lone Chair</b>"
-                    data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/basic/e.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Lone Chair</i></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <br>
-            <hr><br>
-            <h2 style="text-align: center">Canvas</h2><br>
-            <hr><br>
-            <div class="row">
-                <a data-aos="zoom-in-up" href="collection/canvas/a.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Old Oak</b>"
-                    data-footer="<i>Created by - Akshita and Rohan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/canvas/a.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Old Oak</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/canvas/b.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>A Face of the Coin</b>"
-                    data-footer="<i>Created by - NIFT Kangra@Exodia'18 <br> Color used - Acrylic <br> Paper-size  - Not Std</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/canvas/b.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>A Face of the Coin</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/canvas/c.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>Around the Season</b>"
-                    data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/canvas/c.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>Around the Season</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/canvas/e1.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Shadow Couple-1</b>"
-                    data-footer="<i>Created by - Shreyas, Annanya and Rajan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/canvas/e1.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Shadow Couple-1</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/canvas/e2.JPG" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="<b>The Shadow Couple-2</b>"
-                    data-footer="<i>Created by - Shreyas, Ananya and Rajan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/canvas/e2.jpg" class="img-fluid rounded image landscape-img">
-                        <div class="overlay"><i>The Shadow Couple-2</i></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <br>
-            <hr><br>
-            <h2 style="text-align: center">Tshirt @IMPRINTS'18</h2><br>
-            <hr><br>
-            <div class="row portrait">
-                <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Cold Air Warm Heart.jpg"
-                    data-toggle="lightbox" data-gallery="gallery" data-title="<b>Cold Air Warm Heart</b>" data-footer=""
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/shirts/Imprints'18/Cold Air Warm Heart.jpg"
-                            class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Cold Air Warm Heart</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Cool Humans.jpg" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="<b>The Effiel Tower</b>" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/shirts/Imprints'18/Cool Humans.jpg"
-                            class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Cool Humans</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Fire and Ice.jpg" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="<b>Fire and Ice</b>" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/shirts/Imprints'18/Fire and Ice.jpg"
-                            class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Fire and Ice</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Frost Hand.jpg" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="<b>Frost Hand</b>" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/shirts/Imprints'18/Frost Hand.jpg"
-                            class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Frost Hand</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Snow Clad.jpg" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="<b>Snow Clad</b>" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/shirts/Imprints'18/Snow Clad.jpg"
-                            class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Snow Clad</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Mountain Peaks.jpg" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="Mountain Peaks" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/shirts/Imprints'18/Mountain Peaks.jpg"
-                            class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Mountain Peaks</i></div>
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Night Lamp.jpg" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="<b>Night Lamp</b>" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/shirts/Imprints'18/Night Lamp.jpg"
-                            class="img-fluid rounded image portrait-img">
-                        <div class="overlay"><i>Night Lamp</i></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <br>
-            <hr><br>
-            <h2 style="text-align: center">Rangoli @Diwali'18</h2><br>
-            <hr><br>
-            <div class="row portrait">
-                <a data-aos="zoom-in-up" href="collection/rangoli/2.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/rangoli/2.jpg" class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/rangoli/3.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/rangoli/3.jpg" class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/rangoli/5.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/rangoli/5.jpg" class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/rangoli/6.jpg" data-toggle="lightbox" data-gallery="gallery"
-                    data-title="" data-footer="" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/rangoli/6.jpg" class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <br>
-            <hr><br>
-            <h2 style="text-align: center">Doodle @Exodia'18</h2><br>
-            <hr><br>
-            <div class="row portrait">
-                <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Ananya Agarwal.JPG" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="" data-footer="<i>Created by - Ananya Agarwal</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/doodle/ex-18/Ananya Agarwal.jpg"
-                            class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Anuradha Meena - IIT Mandi.jpg"
-                    data-toggle="lightbox" data-gallery="gallery" data-title=""
-                    data-footer="<i>Created by - Anuradha Meena </i>" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/doodle/ex-18/Anuradha Meena - IIT Mandi.jpg"
-                            class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Bivek Kumar - NIT Jamshedpur.jpg"
-                    data-toggle="lightbox" data-gallery="gallery" data-title=""
-                    data-footer="<i>Created by -Bivek Kumar</i>" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/doodle/ex-18/Bivek Kumar - NIT Jamshedpur.jpg"
-                            class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up"
-                    href="collection/doodle/ex-18/India- Net, Clicks and Chill_Parul Punia_IIT Gandhinagar.jpg"
-                    data-toggle="lightbox" data-gallery="gallery" data-title=""
-                    data-footer="<i>Created by - Parul Punia</i>" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/doodle/ex-18/India- Net, Clicks and Chill_Parul Punia_IIT Gandhinagar.jpg"
-                            class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up"
-                    href="collection/doodle/ex-18/India Today- Presenting Indias Present_Tushar Nirmal_IIT Gandhinagar.jpg"
-                    data-toggle="lightbox" data-gallery="gallery" data-title=""
-                    data-footer="<i>Created by - Tushar Nirmal</i>" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/doodle/ex-18/India Today- Presenting Indias Present_Tushar Nirmal_IIT Gandhinagar.jpg"
-                            class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Jaineesha Jain @funkyart.jpg"
-                    data-toggle="lightbox" data-gallery="gallery" data-title=""
-                    data-footer="<i>Created by - Jaineesha Jain </i>" class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/doodle/ex-18/Jaineesha Jain @funkyart.jpg"
-                            class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-                <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Madhvi Singhal.jpg" data-toggle="lightbox"
-                    data-gallery="gallery" data-title="" data-footer="<i>Created by - Madhvi Singhal</i>"
-                    class="col-md-3">
-                    <div class="gallery-container">
-                        <img src="Thumbnails/doodle/ex-18/Madhvi Singhal.jpg"
-                            class="img-fluid rounded image portrait-img">
-                    </div>
-                </a>
-            </div>
-        </div>
+        <a data-aos="zoom-in-up" href="collection/basic/e.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Lone Chair</b>"
+          data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/basic/e.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Lone Chair</i></div>
+          </div>
+        </a>
+      </div>
     </div>
-    <hr>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        AOS.init();
-    </script>
-    <div class="container-fluid col-12" style="text-align :center">
-        <p id="bottom2"> &copy; IIT MANDI ARTGEEKS</p>
+    <div class="container">
+      <br>
+      <hr><br>
+      <h2 style="text-align: center">Canvas</h2><br>
+      <hr><br>
+      <div class="row">
+        <a data-aos="zoom-in-up" href="collection/canvas/a.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Old Oak</b>"
+          data-footer="<i>Created by - Akshita and Rohan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/canvas/a.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Old Oak</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/canvas/b.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>A Face of the Coin</b>"
+          data-footer="<i>Created by - NIFT Kangra@Exodia'18 <br> Color used - Acrylic <br> Paper-size  - Not Std</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/canvas/b.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>A Face of the Coin</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/canvas/c.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>Around the Season</b>"
+          data-footer="<i>Created by - Anonymous <br> Color used - Acrylic <br> Paper-size  - A3</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/canvas/c.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>Around the Season</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/canvas/e1.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Shadow Couple-1</b>"
+          data-footer="<i>Created by - Shreyas, Annanya and Rajan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/canvas/e1.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Shadow Couple-1</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/canvas/e2.JPG" data-toggle="lightbox" data-gallery="gallery"
+          data-title="<b>The Shadow Couple-2</b>"
+          data-footer="<i>Created by - Shreyas, Ananya and Rajan <br> Color used - Acrylic <br> Paper-size  - A3</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/canvas/e2.jpg" class="img-fluid rounded image landscape-img">
+            <div class="overlay"><i>The Shadow Couple-2</i></div>
+          </div>
+        </a>
+      </div>
     </div>
+    <div class="container">
+      <br>
+      <hr><br>
+      <h2 style="text-align: center">Tshirt @IMPRINTS'18</h2><br>
+      <hr><br>
+      <div class="row portrait">
+        <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Cold Air Warm Heart.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="<b>Cold Air Warm Heart</b>" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/shirts/Imprints'18/Cold Air Warm Heart.jpg"
+              class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Cold Air Warm Heart</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Cool Humans.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="<b>The Effiel Tower</b>" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/shirts/Imprints'18/Cool Humans.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Cool Humans</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Fire and Ice.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="<b>Fire and Ice</b>" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/shirts/Imprints'18/Fire and Ice.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Fire and Ice</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Frost Hand.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="<b>Frost Hand</b>" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/shirts/Imprints'18/Frost Hand.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Frost Hand</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Snow Clad.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="<b>Snow Clad</b>" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/shirts/Imprints'18/Snow Clad.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Snow Clad</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Mountain Peaks.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="Mountain Peaks" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/shirts/Imprints'18/Mountain Peaks.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Mountain Peaks</i></div>
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/shirts/Imprints'18/Night Lamp.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="<b>Night Lamp</b>" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/shirts/Imprints'18/Night Lamp.jpg" class="img-fluid rounded image portrait-img">
+            <div class="overlay"><i>Night Lamp</i></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <br>
+      <hr><br>
+      <h2 style="text-align: center">Rangoli @Diwali'18</h2><br>
+      <hr><br>
+      <div class="row portrait">
+        <a data-aos="zoom-in-up" href="collection/rangoli/2.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/rangoli/2.jpg" class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/rangoli/3.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/rangoli/3.jpg" class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/rangoli/5.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/rangoli/5.jpg" class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/rangoli/6.jpg" data-toggle="lightbox" data-gallery="gallery"
+          data-title="" data-footer="" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/rangoli/6.jpg" class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <br>
+      <hr><br>
+      <h2 style="text-align: center">Doodle @Exodia'18</h2><br>
+      <hr><br>
+      <div class="row portrait">
+        <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Ananya Agarwal.JPG" data-toggle="lightbox"
+          data-gallery="gallery" data-title="" data-footer="<i>Created by - Ananya Agarwal</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/doodle/ex-18/Ananya Agarwal.jpg" class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Anuradha Meena - IIT Mandi.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="" data-footer="<i>Created by - Anuradha Meena </i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/doodle/ex-18/Anuradha Meena - IIT Mandi.jpg"
+              class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Bivek Kumar - NIT Jamshedpur.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="" data-footer="<i>Created by -Bivek Kumar</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/doodle/ex-18/Bivek Kumar - NIT Jamshedpur.jpg"
+              class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up"
+          href="collection/doodle/ex-18/India- Net, Clicks and Chill_Parul Punia_IIT Gandhinagar.jpg"
+          data-toggle="lightbox" data-gallery="gallery" data-title="" data-footer="<i>Created by - Parul Punia</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/doodle/ex-18/India- Net, Clicks and Chill_Parul Punia_IIT Gandhinagar.jpg"
+              class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up"
+          href="collection/doodle/ex-18/India Today- Presenting Indias Present_Tushar Nirmal_IIT Gandhinagar.jpg"
+          data-toggle="lightbox" data-gallery="gallery" data-title="" data-footer="<i>Created by - Tushar Nirmal</i>"
+          class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/doodle/ex-18/India Today- Presenting Indias Present_Tushar Nirmal_IIT Gandhinagar.jpg"
+              class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Jaineesha Jain @funkyart.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="" data-footer="<i>Created by - Jaineesha Jain </i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/doodle/ex-18/Jaineesha Jain @funkyart.jpg"
+              class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+        <a data-aos="zoom-in-up" href="collection/doodle/ex-18/Madhvi Singhal.jpg" data-toggle="lightbox"
+          data-gallery="gallery" data-title="" data-footer="<i>Created by - Madhvi Singhal</i>" class="col-md-3">
+          <div class="gallery-container">
+            <img src="Thumbnails/doodle/ex-18/Madhvi Singhal.jpg" class="img-fluid rounded image portrait-img">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+  <div class="container-fluid col-12" style="text-align :center">
+    <p id="bottom2"> &copy; IIT MANDI ARTGEEKS</p>
+  </div>
 
 
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-                document.getElementById("mySidenav").style.display = "block";
-            } else {
-                document.getElementById("mySidenav").style.display = "none";
-            }
+    function scrollFunction() {
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        document.getElementById("mySidenav").style.display = "block";
+      } else {
+        document.getElementById("mySidenav").style.display = "none";
+      }
+    }
+
+
+    // Wrap every letter in a span
+    $('.ml6 .letters').each(function () {
+      $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline({
+        loop: true
+      })
+      .add({
+        targets: '.ml6 .letter',
+        translateY: ["1.1em", 0],
+        translateZ: 0,
+        duration: 750,
+        delay: function (el, i) {
+          return 50 * i;
         }
-
-
-        // Wrap every letter in a span
-        $('.ml6 .letters').each(function () {
-            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-        });
-
-        anime.timeline({
-                loop: true
-            })
-            .add({
-                targets: '.ml6 .letter',
-                translateY: ["1.1em", 0],
-                translateZ: 0,
-                duration: 750,
-                delay: function (el, i) {
-                    return 50 * i;
-                }
-            }).add({
-                targets: '.ml6',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-    </script>
+      }).add({
+        targets: '.ml6',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+  </script>
 </body>
 
 </html>
