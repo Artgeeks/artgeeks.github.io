@@ -43,6 +43,12 @@
       }
     }
 
+    .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+    
     @media only screen and (max-width: 768px) {
       body {
         background-color: burlywood;
@@ -119,25 +125,43 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+ nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+        <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item">
+          <a style="color:#48C9B0" class="nav-link" href="index.html">HOME</a>
+        </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-center">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a style="color:#48C9B0" class="nav-link" href="members.html">MEMBER</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="members.html">Member</a>
+          <a style="color:#48C9B0" class="nav-link" href="gallery.html">GALLERY</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us</a>
+          <a style="color:#48C9B0" class="nav-link" href="contact.html">CONTACT US</a>
         </li>
       </ul>
+         <ul class="navbar-nav ml-auto nav-flex-icons  navbar-right">
+      <li class="nav-item">
+        <a style="color:#2E86C1" href="https://www.facebook.com/artGeeksIITM/" class="nav-link waves-effect waves-light">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a style="color:#E74C3C" href="https://www.instagram.com/artgeeks_iitmandi/" class="nav-link waves-effect waves-light">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+            <li class="nav-item">
+        <a style="color:#FDFEFE" href="mailto:artgeeks@iitmandi.ac.in" class="nav-link waves-effect waves-light">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     </div>
   </nav>
   <div class="topDiv" id="topDivGallery">
