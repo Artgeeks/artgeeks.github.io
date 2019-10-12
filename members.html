@@ -27,7 +27,7 @@
       }
     }
     
-           .navbar-nav.navbar-center {
+    .navbar-nav.navbar-center {
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
@@ -83,7 +83,7 @@
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav" style="display:none">
     <a href="https://www.facebook.com/artGeeksIITM/" id="fb"><i class="fab fa-facebook-f"></i></a>
     <a href="https://www.instagram.com/artgeeks_iitmandi/" id="insta"><i class="fab fa-instagram"></i></a>
     <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class="fas fa-envelope"></i></a>
@@ -519,6 +519,18 @@
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+  	// When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        document.getElementById("mySidenav").style.display = "block";
+      } else {
+        document.getElementById("mySidenav").style.display = "none";
+      }
+    }
     AOS.init();
   </script>
 </body>
