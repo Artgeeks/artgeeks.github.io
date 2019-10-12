@@ -137,8 +137,9 @@
 	      </div>
 
 	      <!-- Modal body -->
-	      <div class="modal-body">
-	      <!-- Add Contributors here-->
+	      <div id="add-cont" class="modal-body">
+        <!-- Add Contributors here-->
+       
 
 	      </div>
 	    </div>
@@ -231,6 +232,35 @@
   <div class="container-fluid col-12" style="text-align :center">
     <p id="bottom2"> &copy; IIT MANDI ARTGEEKS</p>
   </div>
+  <script>
+    //for fetching contributors
+    var addCont = document.getElementById("add-cont");
+    var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+};
+getJSON('https://api.github.com/repos/Artgeeks/artgeeks.github.io/contributors',
+function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    data.map((a,b)=>{
+      console.log(a);
+      addCont.innerHTML += '<div class="card"><img src='+a.avatar_url+ 'alt="Avatar" style="width:100%"><div class="container"><h4><b>'+a.login+'</b></h4> <p>Contibutions : '+a.contributions+'</p> </div></div>'; 
+    });
+  }
+});
+  </script>
 
 
   <script>
@@ -277,3 +307,18 @@
 </body>
 
 </html>
+<style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 40%;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    .container {
+      padding: 2px 16px;
+    }
+    </style>
