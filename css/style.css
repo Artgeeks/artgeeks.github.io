@@ -81,6 +81,40 @@
   opacity: 0.5;
 }
 
+.topDiv {
+  background-color:burlywood;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#topDivIndex {
+  background-image:url(../img/5c9e595493760.jpg);
+  min-height: 800px;
+  background-position: top;
+}
+
+#topDivMember {
+  background-image: url(../img/tram.jpg);
+  min-height: 750px;
+  background-position: center;
+  z-index: 2;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+#topDivGallery {
+  background-image: url(../img/5c9d93c75da37.jpg);
+  min-height: 800px;
+  background-position: top;
+}
+
+#topDivContact {
+  background-image:url(../img/5c9f7525853b3.jpg);
+  min-height: 800px;
+  background-position:center;
+}
+
 @media screen and (max-width: 768px) {
   .sidenav {
     visibility: hidden;
