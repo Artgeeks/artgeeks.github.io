@@ -204,3 +204,8 @@
   padding-top: 35px;
   padding-bottom: 35px;
 }
+
+.bg-black{
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+}
