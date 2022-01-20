@@ -90,6 +90,7 @@
     <a href="mailto:artgeeks@iitmandi.ac.in" id="mail"><i class="fas fa-envelope"></i></a>
     <a href="contact.html" id="contact"><i class="fas fa-chevron-right"></i></a>
   </div>
+  <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up" style="font-size: 20px"></i></button>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -583,21 +584,36 @@
     <p id="bottom2"> &copy; IIT MANDI ARTGEEKS</p>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-  	// When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-      scrollFunction()
-    };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-        document.getElementById("mySidenav").style.display = "block";
-      } else {
-        document.getElementById("mySidenav").style.display = "none";
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+        scrollFunction2()
+      };
+  
+      function scrollFunction() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+          document.getElementById("mySidenav").style.display = "block";
+        } else {
+          document.getElementById("mySidenav").style.display = "none";
+        }
       }
-    }
-    AOS.init();
-  </script>
+  
+      function scrollFunction2() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+  
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      AOS.init();
+    </script>
 </body>
 
 </html>
